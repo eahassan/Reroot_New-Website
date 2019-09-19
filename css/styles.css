@@ -21,7 +21,7 @@ header, section, footer, aside, nav, main, article, figure {
     top: -40px;
     left: 0;
     background: orange;
-    color: white;
+    color: navy;
     padding: 8px;
     z-index: 100;
 }
@@ -31,13 +31,12 @@ header, section, footer, aside, nav, main, article, figure {
 }
 
 .logo {
-   width:300px; 
-   margin-left: auto; 
-   margin-right: auto; 
+   width:300px;
 }
 
 .logo-foot {
-    width:200px;
+/*    width: 300px;*/
+    float: left;
     padding: 20px;
 }
 
@@ -87,30 +86,53 @@ main {
     min-height: 100%;
 }
 
-.fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 30px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-  border-radius: 50%;
-}
-
-/*
 .fa-facebook, .fa-twitter, .fa-youtube, .fa-instagram {
-    background: orange;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 5px;
+    color: darkorange;
+    text-align: center;
 }
-*/
 
 .addr-foot {
-    padding: 20px;
+    padding: 10px;
+    font-size: 1.25rem;
+}
+
+.addr-foot a {
+    color: navy;
+}
+
+.copyRght {
+    font-size: 1.25rem;
 }
 
 #footer {
    position: absolute;
+   clear: both;
 /*   bottom: 0;*/
 /*   left: 0px;    */
    width: 100%;
    height: auto;
+}
+
+
+/* Responsive CSS */
+
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) { /* Laptops and Desktops */
+    
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) { /* Tablets, Laptops */
+    
+}
+
+@media only screen and (min-width: 0px) and (max-width: 580px) { /* Phones & other small devices */
+    
+    .logo-foot {
+        float: none;
+        display: block;
+        margin: auto;
+    }
 }
