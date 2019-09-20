@@ -81,9 +81,70 @@ header, section, footer, aside, nav, main, article, figure {
     display: block;
 }
 
+.container-fluid {
+    padding: 10px 15px;
+}
+
 main {
     height: auto;
     min-height: 100%;
+}
+
+#carouselHead {
+   font-style: italic;
+   text-decoration: underline;
+}
+
+.carousel-inner > .carousel-item > img { /* Formerly, known as .carousel-inner img ! */
+      width: 100%;
+      height: 700px; /* Orginially, 600px !!! */
+      margin: 0 auto;
+  }
+
+.carousel_Buttons {
+    margin-left: 100px;
+    position: absolute;
+    bottom: 35px;
+    right: 0px;
+    align-self: center;
+    z-index: 9999;
+}
+
+.carousel-inner {
+    border: 1px solid black;
+}
+
+.carousel-caption {
+    color: #FFA500; /* orange */
+}
+
+.carousel-caption_2 {
+    color: #32CD32;
+    position: absolute;
+    right: 15%;
+    bottom: 20px;
+    left: 15%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: black;
+}
+
+.carousel-control-prev-icon:hover, .carousel-control-next-icon:hover, #playBtn:hover, #pauseBtn:hover {
+    border: 3px blue solid;
+}
+
+#playBtn, #pauseBtn {
+    border-radius: 80%;
+    font-size: 1.25rem;
 }
 
 .fa-facebook, .fa-twitter, .fa-youtube, .fa-instagram {
