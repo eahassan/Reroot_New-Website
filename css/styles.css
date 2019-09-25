@@ -177,6 +177,36 @@ main {
    height: auto;
 }
 
+.slide-container {
+    margin: 25px 25px;
+}
+
+.aslide {
+    display: none;
+}
+
+.aslide img {
+    max-width: 100%;
+}
+
+.aslider {
+    width: 50%;
+    height: 500px;
+    margin: auto;
+}
+
+.aslide .text {
+    margin: 0 auto;
+    color: #f8f8f8;
+    text-shadow: 0 0 2px #000;
+    font-weight: bold;
+    font-size: 36px;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 30px;
+    font-family: sans-serif;
+}
 
 /* Responsive CSS */
 
@@ -187,6 +217,14 @@ main {
 
 @media only screen and (min-width: 768px) and (max-width: 992px) { /* Tablets, Laptops */
     
+        .aslider {
+    width: 80%;
+    height: 500px;
+    margin-bottom: 60px;
+    margin-top: 30px;
+    margin: auto;
+}
+    
 }
 
 @media only screen and (min-width: 0px) and (max-width: 580px) { /* Phones & other small devices */
@@ -196,4 +234,19 @@ main {
         display: block;
         margin: auto;
     }
+    
+    .aslider {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 60px;
+    margin-top: 30px;
+    margin: auto;
+}
+    
+.slide-container {
+    margin: 0;
+}    
+    
+    
+    
 }
