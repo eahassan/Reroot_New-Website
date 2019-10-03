@@ -153,6 +153,10 @@ main {
 }
 */
 
+.marg-botm {
+    margin-bottom: 25px;
+}
+
 .fa-facebook, .fa-twitter, .fa-youtube, .fa-instagram {
     margin-top: 20px;
     margin-bottom: 20px;
