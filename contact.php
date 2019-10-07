@@ -66,8 +66,21 @@ echo " ";
             <textarea type="text" id="message" name="message" rows="2" class="form-control" placeholder="Enter your Message here..."></textarea>
             </div>
             
-            <div class="text-center">
-                <button type="submit" class="btn btn-primary">Send</button>
+<!--
+            <div class="fileUpload btn btn-primary">
+             <span>Upload</span>
+             <input type="file" class="upload float-left">
+            </div>
+-->
+            <label for="uploadFile" class="font-weight-bolder">Attachments:</label>
+            <input id="uploadFile" placeholder="Choose File">
+        <div class="fileUpload btn btn-primary btn-rounded">
+          <span>Upload</span>
+          <input id="uploadBtn" type="file" class="upload float-left" aria-label="Upload file">
+        </div>
+            
+            <div class="text-center marg-botm">
+                <button type="submit" class=" btn btn-submit float-left">Send</button>
             </div>    
                                         
           </form> <br><br>

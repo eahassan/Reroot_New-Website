@@ -17,3 +17,7 @@ $(function () {
 $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip();   
 });
+
+document.getElementById("uploadBtn").onchange = function () {
+    document.getElementById("uploadFile").value = this.value;
+};
