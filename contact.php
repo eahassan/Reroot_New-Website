@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Google Fonts - Karma -->    
     <link href="https://fonts.googleapis.com/css?family=Karma&display=swap" rel="stylesheet">
+    <!-- Google Fonts - Roboto -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <!-- styles CSS file -->
     <link rel="stylesheet" href="css/styles.css">
     <!-- Favicon -->
@@ -40,30 +42,31 @@ echo " ";
     <p class="text-center">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
         a matter of hours to help you.</p>
     <form action="#" method="POST">
-            
+            <fieldset>
+              <legend class="undrline">Personal Information:</legend>
             <div class="form-group">  <!-- <i class="fas fa-user"></i> -->
             <label for="name" class="font-weight-bolder">Name:</label>    
-            <input type="text" id="name" name="name" class="form-control" placeholder="Enter your Name"><br>
+            <input type="text" id="name" name="name" class="form-control input-name" placeholder="Enter your Name" required><br>
             </div>
                              
             
            
             <div class="form-group">    <!-- <i class="fas fa-envelope"></i> -->
             <label for="email" class="font-weight-bolder">E-Mail:</label>         
-            <input type="text" id="email" name="email" class="form-control" placeholder="Enter your E-Mail"><br>
+            <input type="text" id="email" name="email" class="form-control input-email" placeholder="Enter your E-Mail" pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/" required><br>
             </div>
              
               
             
             <div class="form-group">   <!-- <i class="fas fa-leaf"></i> -->           
             <label for="subject" class="font-weight-bolder">Subject:</label>       
-            <input type="text" id="subject" name="subject" class="form-control" placeholder="Enter your Subject line"><br>
+            <input type="text" id="subject" name="subject" class="form-control input-subjct" placeholder="Enter your Subject line" required><br>
             </div>
               
                  
             <div class="form-group">   <!-- <i class="fas fa-comment-alt"></i> -->               
             <label for="message" class="font-weight-bolder">Message:</label>        
-            <textarea type="text" id="message" name="message" rows="2" class="form-control" placeholder="Enter your Message here..."></textarea>
+            <textarea type="text" id="message" name="message" rows="10" cols="30" class="form-control" placeholder="Your message goes here..." required></textarea>
             </div>
             
 <!--
@@ -73,7 +76,7 @@ echo " ";
             </div>
 -->
             <label for="uploadFile" class="font-weight-bolder">Attachments:</label>
-            <input id="uploadFile" placeholder="Choose File">
+            <input id="uploadFile" placeholder="Choose File" name="fileChoose" class="input-file">
         <div class="fileUpload btn btn-primary btn-rounded">
           <span>Upload</span>
           <input id="uploadBtn" type="file" class="upload float-left" aria-label="Upload file">
@@ -82,7 +85,9 @@ echo " ";
             <div class="text-center marg-botm">
                 <button type="submit" class=" btn btn-submit float-left">Send</button>
             </div>    
+             
                                         
+          </fieldset>                                                                                     
           </form> <br><br>
                 
 </section> 
