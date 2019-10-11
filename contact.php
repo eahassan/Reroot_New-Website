@@ -26,8 +26,7 @@
 <?php
 
 echo " ";
-
-
+    
 ?>
 
 <main id="mainContent" tabindex="-1">
@@ -41,7 +40,7 @@ echo " ";
     <hr>
     <p class="text-center">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
         a matter of hours to help you.</p>
-    <form action="#" method="POST">
+    <form action="$_SERVER['PHP_SELF']" method="POST">
             <fieldset>
               <legend class="undrline">Personal Information:</legend>
             <div class="form-group">  <!-- <i class="fas fa-user"></i> -->
@@ -53,7 +52,7 @@ echo " ";
            
             <div class="form-group">    <!-- <i class="fas fa-envelope"></i> -->
             <label for="email" class="font-weight-bolder">E-Mail:</label>         
-            <input type="text" id="email" name="email" class="form-control input-email" placeholder="Enter your E-Mail" pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/" required><br>
+            <input type="text" id="email" name="email" class="form-control input-email" placeholder="Enter your E-Mail" required><br>
             </div>
              
               
@@ -83,7 +82,7 @@ echo " ";
         </div>
             
             <div class="text-center marg-botm">
-                <button type="submit" class=" btn btn-submit float-left">Send</button>
+                <button type="submit" class=" btn btn-submit float-left" onclick="validateForm()">Send</button>
             </div>    
              
                                         
@@ -112,7 +111,19 @@ echo " ";
 
 </div>
 </div>
-</main>        
+</main>
+               
+  <!-- jQuery -->   
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+    
+ <!-- Popper.JS-->
+ <script src="js/Popper.js"></script>
+ 
+ <!-- Bootstrap minified JS -->
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ 
+ <!-- Website's JS -->    
+ <script src="js/Site.js"></script>                               
                 
 </body>    
 </html>
