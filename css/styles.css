@@ -11,6 +11,10 @@ body {
     font-family: 'Karma', serif;
 }
 
+.bg-contact {
+  background-color: #8FBC8F; /* darkseagreen */
+}
+
 header, section, footer, aside, nav, main, article, figure {
     display: block; 
 }
@@ -283,6 +287,7 @@ input[placeholder], input[placeholder="Choose File"], textarea[placeholder] {
 .btn-rounded {
     border-radius: 20px;
     border:1px solid #0b0e07;
+    color:#FFFF00;
 }
 
 .btn-submit {
@@ -293,18 +298,20 @@ input[placeholder], input[placeholder="Choose File"], textarea[placeholder] {
 	border:1px solid #0b0e07;
 	display:inline-block;
 	cursor:pointer;
-	color:#ffffff;
+	color:#FFFF00;
 	font-family:Arial;
 	font-size:18px;
 	padding:18px 36px;
 	text-decoration:none;
 	text-shadow:0px 1px 18px #263666;
 }
-.btn-submit:hover {
+.btn-submit:hover, .btn-rounded:hover {
 	background:linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
 	background-color:#0688fa;
+    color: #000;
 }
-.btn-submit:active {
+.btn-submit:active, .btn-rounded:active {
+    color: #000;
 	position:relative;
 	top:1px;
 }
@@ -319,6 +326,10 @@ input[placeholder], input[placeholder="Choose File"], textarea[placeholder] {
 
 .fa-envelope {
     color: deepskyblue;
+}
+
+.error {
+    color: #FF0000;
 }
 
 

@@ -22,10 +22,63 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="images/icons/green-leave.ico">
 </head>    
-<body>
+<body class="bg-contact">
 <?php
 
-echo " ";
+//include "upload.php";    
+
+// Define variables
+$name = $email = $subject = $message = $file = "";
+$nameErr = $emailErr = $subjectErr = $messageErr = $fileErr = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    
+  $name = test_input($_POST["name"]);
+  $email = test_input($_POST["email"]);
+  $subject = test_input($_POST["subject"]);
+  $message = test_input($_POST["message"]);
+  $file = test_input($_POST["fileChoose"]);
+    
+  if (empty($_POST["name"])) {
+    $nameErr = "";
+  } else {
+    $name = test_input($_POST["name"]);
+    // check if name only contains letters and whitespace
+    if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+      $nameErr = "Only letters and white space allowed"; 
+    }
+  }
+  
+  if (empty($_POST["email"])) {
+    $emailErr = "";
+  } else {
+    $email = test_input($_POST["email"]);
+    // check if e-mail address is well-formed
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      $emailErr = "Invalid email format"; 
+    }
+  }
+    
+ if (empty($_POST["subject"])) {
+    $subjectErr = "";
+  } else {
+    $subject = test_input($_POST["subject"]);
+  }
+    
+ if (empty($_POST["message"])) {
+    $messageErr = "";
+  } else {
+    $message = test_input($_POST["message"]);
+  }    
+    
+}
+    
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
     
 ?>
 
@@ -40,49 +93,43 @@ echo " ";
     <hr>
     <p class="text-center">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
         a matter of hours to help you.</p>
-    <form action="$_SERVER['PHP_SELF']" method="POST">
+    <p class="text-center"><span class="error">* Required field</span></p>    
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
             <fieldset>
               <legend class="undrline">Personal Information:</legend>
-            <div class="form-group">  <!-- <i class="fas fa-user"></i> -->
-            <label for="name" class="font-weight-bolder">Name:</label>    
-            <input type="text" id="name" name="name" class="form-control input-name" placeholder="Enter your Name" required><br>
+            <div class="form-group">
+            <span class="error">* <?php echo $nameErr;?></span>  
+            <label for="name" class="font-weight-bolder">Name:</label>  
+            <input type="text" id="name" name="name" class="form-control input-name" placeholder="Enter your Name" value="<?php echo $name;?>"><br>
             </div>
                              
-            
-           
-            <div class="form-group">    <!-- <i class="fas fa-envelope"></i> -->
-            <label for="email" class="font-weight-bolder">E-Mail:</label>         
-            <input type="text" id="email" name="email" class="form-control input-email" placeholder="Enter your E-Mail" required><br>
+            <div class="form-group">
+            <span class="error">* <?php echo $emailErr;?></span> 
+            <label for="email" class="font-weight-bolder">E-Mail:</label>        
+            <input type="text" id="email" name="email" class="form-control input-email" placeholder="Enter your E-Mail" value="<?php echo $email;?>"><br>
             </div>
              
-              
-            
-            <div class="form-group">   <!-- <i class="fas fa-leaf"></i> -->           
-            <label for="subject" class="font-weight-bolder">Subject:</label>       
-            <input type="text" id="subject" name="subject" class="form-control input-subjct" placeholder="Enter your Subject line" required><br>
+            <div class="form-group">
+            <span class="error">* <?php echo $subjectErr;?></span>             
+            <label for="subject" class="font-weight-bolder">Subject:</label>     
+            <input type="text" id="subject" name="subject" class="form-control input-subjct" placeholder="Enter your Subject line" value="<?php echo $subject;?>"><br>
             </div>
-              
-                 
-            <div class="form-group">   <!-- <i class="fas fa-comment-alt"></i> -->               
+                   
+            <div class="form-group">
+            <span class="error">* <?php echo $messageErr;?></span>            
             <label for="message" class="font-weight-bolder">Message:</label>        
-            <textarea type="text" id="message" name="message" rows="10" cols="30" class="form-control" placeholder="Your message goes here..." required></textarea>
+            <textarea type="text" id="message" name="message" rows="10" cols="30" class="form-control" placeholder="Your message goes here..."><?php echo $message;?></textarea>
             </div>
             
-<!--
-            <div class="fileUpload btn btn-primary">
-             <span>Upload</span>
-             <input type="file" class="upload float-left">
-            </div>
--->
             <label for="uploadFile" class="font-weight-bolder">Attachments:</label>
-            <input id="uploadFile" placeholder="Choose File" name="fileChoose" class="input-file">
+            <input id="uploadFile" placeholder="Choose File" name="fileChoose" class="input-file" value="<?php echo $file;?>">
         <div class="fileUpload btn btn-primary btn-rounded">
           <span>Upload</span>
           <input id="uploadBtn" type="file" class="upload float-left" aria-label="Upload file">
         </div>
             
             <div class="text-center marg-botm">
-                <button type="submit" class=" btn btn-submit float-left" onclick="validateForm()">Send</button>
+                <button type="submit" class=" btn btn-submit float-left">Send</button>
             </div>    
              
                                         
@@ -107,8 +154,18 @@ echo " ";
                 </li>
             </ul>
         </div>
-
-
+<?php        
+//echo "<h2>Your Input:</h2>";
+//echo $name;
+//echo "<br>";
+//echo $email;
+//echo "<br>";
+//echo $subject;
+//echo "<br>";
+//echo $message;
+//echo "<br>";
+//echo $file; 
+?>        
 </div>
 </div>
 </main>
