@@ -29,7 +29,7 @@
 
 // Define variables
 $name = $email = $subject = $message = $file = "";
-$nameErr = $emailErr = $subjectErr = $messageErr = $fileErr = "";
+$nameErr = $emailErr = $subjectErr = $messageErr = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $email = test_input($_POST["email"]);
   $subject = test_input($_POST["subject"]);
   $message = test_input($_POST["message"]);
-  $file = test_input($_POST["fileChoose"]);
+  $file = test_input($_POST["file"]);
     
   if (empty($_POST["name"])) {
     $nameErr = "";
@@ -85,7 +85,6 @@ function test_input($data) {
 <main id="mainContent" tabindex="-1">
 <div class="container-fluid">
 <div class="row">
-<!-- <div class="col-md-9">-->
 <!-- https://mdbootstrap.com/docs/jquery/forms/contact/#antispam -->     
 <div class="col-md-12">
 <section>
@@ -94,7 +93,7 @@ function test_input($data) {
     <p class="text-center">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
         a matter of hours to help you.</p>
     <p class="text-center"><span class="error">* Required field</span></p>    
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" id="contact-form" name="contact-form">
             <fieldset>
               <legend class="undrline">Personal Information:</legend>
             <div class="form-group">
@@ -122,7 +121,7 @@ function test_input($data) {
             </div>
             
             <label for="uploadFile" class="font-weight-bolder">Attachments:</label>
-            <input id="uploadFile" placeholder="Choose File" name="fileChoose" class="input-file" value="<?php echo $file;?>">
+            <input id="uploadFile" placeholder="Choose File" name="file" class="input-file" value="<?php echo $file;?>">
         <div class="fileUpload btn btn-primary btn-rounded">
           <span>Upload</span>
           <input id="uploadBtn" type="file" class="upload float-left" aria-label="Upload file">
@@ -131,8 +130,7 @@ function test_input($data) {
             <div class="text-center marg-botm">
                 <button type="submit" class=" btn btn-submit float-left">Send</button>
             </div>    
-             
-                                        
+                                           
           </fieldset>                                                                                     
           </form> <br><br>
                 
@@ -164,7 +162,26 @@ function test_input($data) {
 //echo "<br>";
 //echo $message;
 //echo "<br>";
-//echo $file; 
+//echo $file;
+
+//if(!empty($_POST["send"])) {
+//	$name = $_POST["name"];
+//	$email = $_POST["email"];
+//	$subject = $_POST["subject"];
+//	$message = $_POST["message"];
+//    $file = $_POST["file"];
+//
+//	$toEmail = "ehmario@gmail.com";
+//	$mailHeaders = "From: " . $name . "<". $email .">\r\n";
+//	if(mail($toEmail, $subject, $message, $file, $mailHeaders)) {
+//	    echo "E-Mail sent successfully!";
+//	}
+//    else {
+//        echo "Error occurred - E-Mail Failure";
+//    }
+//}    
+    
+    
 ?>        
 </div>
 </div>
