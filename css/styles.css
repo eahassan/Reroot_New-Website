@@ -238,11 +238,12 @@ main {
 input, textarea {
     border-radius: 10px;
     font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
 }
 
 input[placeholder], input[placeholder="Choose File"], textarea[placeholder] {
     color: #bbb;
-    font-weight: 700;
+    font-weight: bolder;
 }
 
 .input-name {

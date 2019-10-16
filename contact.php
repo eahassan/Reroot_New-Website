@@ -25,8 +25,7 @@
 <body class="bg-contact">
 <?php
 
-//include "upload.php";    
-
+  
 // Define variables
 $name = $email = $subject = $message = $file = "";
 $nameErr = $emailErr = $subjectErr = $messageErr = "";
@@ -93,7 +92,7 @@ function test_input($data) {
     <p class="text-center">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
         a matter of hours to help you.</p>
     <p class="text-center"><span class="error">* Required field</span></p>    
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" id="contact-form" name="contact-form">
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" id="contact-form" name="contact-form" enctype="multipart/form-data">
             <fieldset>
               <legend class="undrline">Personal Information:</legend>
             <div class="form-group">
@@ -124,11 +123,11 @@ function test_input($data) {
             <input id="uploadFile" placeholder="Choose File" name="file" class="input-file" value="<?php echo $file;?>">
         <div class="fileUpload btn btn-primary btn-rounded">
           <span>Upload</span>
-          <input id="uploadBtn" type="file" class="upload float-left" aria-label="Upload file">
+          <input id="uploadBtn" type="file" class="upload float-left" name="file[]" aria-label="Upload file" multiple>
         </div>
             
             <div class="text-center marg-botm">
-                <button type="submit" class=" btn btn-submit float-left">Send</button>
+                <button type="submit" class="btn btn-submit float-left" name="btnSubmit">Send</button>
             </div>    
                                            
           </fieldset>                                                                                     
@@ -152,7 +151,10 @@ function test_input($data) {
                 </li>
             </ul>
         </div>
-<?php        
+<?php
+    
+    
+include "upload.php";      
 //echo "<h2>Your Input:</h2>";
 //echo $name;
 //echo "<br>";
