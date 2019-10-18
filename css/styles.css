@@ -104,6 +104,11 @@ main {
    text-decoration: underline;
 }
 
+.text-shandow {
+      color: #001b92;
+  text-shadow: 2px 2px 5px yellow;
+}
+
 .carousel-inner > .carousel-item > img { /* Formerly, known as .carousel-inner img ! */
       width: 100%;
       height: 700px; /* Orginially, 600px !!! */
@@ -336,6 +341,35 @@ input[placeholder], input[placeholder="Choose File"], textarea[placeholder] {
 
 .error {
     color: #FF0000;
+}
+
+.img-hover-opacity:hover {
+    opacity: 0.60;
+}
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in { /* https://fabriceleven.com/design/creating-fancy-css3-fade-in-animations-on-page-load/ */
+	opacity:0;  /* make things invisible upon start */
+	-webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+
+	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+
+	-webkit-animation-duration:1s;
+	-moz-animation-duration:1s;
+	animation-duration:1s;
+}
+
+.fade-in.one {
+-webkit-animation-delay: 0.7s;
+-moz-animation-delay: 0.7s;
+animation-delay: 0.7s;
 }
 
 
