@@ -22,7 +22,7 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="images/icons/green-leave.ico">
 </head>    
-<body class="bg-contact">
+<body>
 <?php
 
   
@@ -88,6 +88,7 @@ function test_input($data) {
 <div class="col-md-12">
 <section>
    <h1 class="font-weight-bold text-center">Contact Us</h1>
+    <img src="images/logo_2.png" alt="Reroot Pontiac's Logo" class="logo-contact mx-auto d-block">
     <hr>
     <p class="text-center">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
         a matter of hours to help you.</p>

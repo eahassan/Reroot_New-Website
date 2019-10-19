@@ -9,15 +9,11 @@ body {
     padding: 0;
     font-size: 1.125rem;
     font-family: 'Karma', serif;
-    background: url("../images/light_green-bg.jpg");
+    background-color: #ddffff !important
 }
 
 .bg-home {
    background: url("../images/abstract-green_nature-bg.jpg");
-}
-
-.bg-contact {
-  background-color: #8FBC8F; /* darkseagreen */
 }
 
 header, section, footer, aside, nav, main, article, figure {
@@ -41,6 +37,10 @@ header, section, footer, aside, nav, main, article, figure {
 
 .logo {
    width:300px;
+}
+
+.logo-contact {
+  width:500px;  
 }
 
 .logo-foot {
@@ -226,7 +226,7 @@ main {
 .aslide .text {
     margin: 0 auto;
     color: #e6e600;
-    text-shadow: 0 0 2px #000;
+    text-shadow: 2px 0 2px #000;
     font-weight: bold;
     font-size: 36px;
     width: 100%;
@@ -344,7 +344,7 @@ input[placeholder], input[placeholder="Choose File"], textarea[placeholder] {
 }
 
 .img-hover-opacity:hover {
-    opacity: 0.60;
+    opacity: 0.80;
 }
 
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
