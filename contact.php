@@ -167,22 +167,22 @@ include "upload.php";
 //echo "<br>";
 //echo $file;
 
-//if(!empty($_POST["send"])) {
-//	$name = $_POST["name"];
-//	$email = $_POST["email"];
-//	$subject = $_POST["subject"];
-//	$message = $_POST["message"];
-//    $file = $_POST["file"];
-//
-//	$toEmail = "ehmario@gmail.com";
-//	$mailHeaders = "From: " . $name . "<". $email .">\r\n";
-//	if(mail($toEmail, $subject, $message, $file, $mailHeaders)) {
-//	    echo "E-Mail sent successfully!";
-//	}
-//    else {
-//        echo "Error occurred - E-Mail Failure";
-//    }
-//}    
+if(!empty($_POST["contact-form"])) {
+	$name = $_POST["name"];
+	$email = $_POST["email"];
+	$subject = $_POST["subject"];
+	$message = $_POST["message"];
+    $file = $_POST["file"];
+
+	$toEmail = "ehmario@gmail.com";
+	$mailHeaders = "From: " . $name . "<". $email .">\r\n";
+	if(mail($toEmail, $subject, $message, $file, $mailHeaders)) {
+	    echo "E-Mail sent successfully!";
+	}
+    else {
+        echo "Error occurred - E-Mail Failure";
+    }
+}    
     
     
 ?>        
