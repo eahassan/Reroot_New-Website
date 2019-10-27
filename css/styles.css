@@ -9,7 +9,8 @@ body {
     padding: 0;
     font-size: 1.125rem;
     font-family: 'Karma', serif;
-    background-color: #ddffff !important
+    background-color: #ddffff !important;
+    color: #191970; /* midnightblue */
 }
 
 .bg-home {
@@ -25,8 +26,8 @@ header, section, footer, aside, nav, main, article, figure {
     text-decoration: underline;
     top: -40px;
     left: 0;
-    background: orange;
-    color: navy;
+    background: #FFA500; /* orange */
+    color: #000080; /* navy */
     padding: 8px;
     z-index: 100;
 }
@@ -49,9 +50,7 @@ header, section, footer, aside, nav, main, article, figure {
     padding: 20px;
 }
 
-.navbar-brand {
-    font-size: 2.5rem; /* 40px */
-    font-family: "Merienda";
+.navbar-brand img {
     max-width: 100%;
 }
 
@@ -60,7 +59,7 @@ header, section, footer, aside, nav, main, article, figure {
 }
 
 .dropdown-item {
-    background-color: darkorange; /* moccasin */
+    background-color: #FF8C00; /* darkorange */
 }
 
 .dropdown-item:hover {
@@ -82,6 +81,23 @@ header, section, footer, aside, nav, main, article, figure {
 }
 */
 
+/*
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+*/
+
+/*
+a:hover, a:active {
+  background-color: red;
+}
+*/
+
 .nav-marg {
     margin-bottom: 20px;
 }
@@ -99,14 +115,31 @@ main {
     min-height: 100%;
 }
 
+.animate-left {
+    position: relative;
+    animation: animateleft 0.6s;
+}
+
+@keyframes animateleft {
+    from {
+        left: -300px;
+        opacity: 0;
+    }
+
+    to {
+        left: 0;
+        opacity: 1;
+    }
+}
+
 #carouselHead {
    font-style: italic;
    text-decoration: underline;
 }
 
 .text-shandow {
-      color: #001b92;
-  text-shadow: 2px 2px 5px yellow;
+  color: #001b92;
+  text-shadow: 2px 2px 5px #FFFF00;
 }
 
 .carousel-inner > .carousel-item > img { /* Formerly, known as .carousel-inner img ! */
@@ -125,7 +158,7 @@ main {
 }
 
 .carousel-inner {
-    border: 1px solid black;
+    border: 1px solid #000;
 }
 
 .carousel-caption {
@@ -149,16 +182,20 @@ main {
 }
 
 .carousel-control-prev-icon, .carousel-control-next-icon {
-    background-color: black;
+    background-color: #000;
 }
 
 .carousel-control-prev-icon:hover, .carousel-control-next-icon:hover, #playBtn:hover, #pauseBtn:hover {
-    border: 3px blue solid;
+    border: 3px #00f solid;
 }
 
 #playBtn, #pauseBtn {
     border-radius: 80%;
     font-size: 1.25rem;
+}
+
+.list-style {
+    list-style-type: square;
 }
 
 /*
