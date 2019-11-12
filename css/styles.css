@@ -8,6 +8,7 @@ body {
     margin: 0;
     padding: 0;
     font-size: 1.125rem;
+    line-height: 1.5;
     font-family: 'Karma', serif;
     background-color: #ddffff !important;
     color: #191970; /* midnightblue */
@@ -58,6 +59,23 @@ header, section, footer, aside, nav, main, article, figure {
     color: #000000;
 }
 
+.nav-item::after { 
+   content:'';
+   display:block;
+   width:0px;
+   height:2px;
+   background: gold;
+   transition: 0.2s;
+}
+
+.nav-item:hover::after {
+    width:100%;
+}
+
+.navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show > .nav-link,.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+    color: gold;
+}
+
 .dropdown-item {
     background-color: #FF8C00; /* darkorange */
 }
@@ -66,6 +84,12 @@ header, section, footer, aside, nav, main, article, figure {
     background-color: #87CEEB; /* skyblue */
 }
 
+/*
+.dropdown-item:active {
+    color: cornflowerblue;
+}
+*/
+
 *:focus {
     outline-color: #191970; /* midnightblue */
 }
@@ -73,6 +97,8 @@ header, section, footer, aside, nav, main, article, figure {
 .nav-link {
     font-weight: bold;
     font-size: 1.15rem; /* 18px */
+    padding: 15px 5px;
+    transition:0.2s;
 }
 
 /*
@@ -102,7 +128,7 @@ a:hover, a:active {
     margin-bottom: 20px;
 }
 
-.dropdown:hover>.dropdown-menu {
+.navbar-nav .dropdown:hover>.dropdown-menu {
     display: block;
 }
 
