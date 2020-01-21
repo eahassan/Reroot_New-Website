@@ -120,12 +120,14 @@ function test_input($data) {
             <textarea type="text" id="message" name="message" rows="10" cols="30" class="form-control" placeholder="Your message goes here..."><?php echo $message;?></textarea>
             </div>
             
-            <label for="uploadFile" class="font-weight-bolder">Attachments:</label>
-            <input id="uploadFile" placeholder="Choose File" name="file" class="input-file" value="<?php echo $file;?>">
+            <!-- Upload file(s) form input field-->
+            
+          <!--  <label for="uploadFile" class="font-weight-bolder">Attachments:</label>
+            <input id="uploadFile" placeholder="Choose File" name="file" class="input-file">
         <div class="fileUpload btn btn-primary btn-rounded">
           <span>Upload</span>
           <input id="uploadBtn" type="file" class="upload float-left" name="file[]" aria-label="Upload file" multiple>
-        </div>
+        </div> -->
             
             <div class="text-center marg-botm">
                 <button type="submit" class="btn btn-submit float-left" name="btnSubmit">Send</button>
@@ -155,9 +157,11 @@ function test_input($data) {
 <?php
     
     
-include "upload.php";      
+/* Upload functionality */    
+//include "upload.php";
+    
 //echo "<h2>Your Input:</h2>";
-//echo $name;
+//echo $name;  
 //echo "<br>";
 //echo $email;
 //echo "<br>";
@@ -172,11 +176,11 @@ if(!empty($_POST["contact-form"])) {
 	$email = $_POST["email"];
 	$subject = $_POST["subject"];
 	$message = $_POST["message"];
-    $file = $_POST["file"];
+//    $file = $_POST["file"];
 
-	$toEmail = "ehmario@gmail.com";
+	$toEmail = "info@rerootpontiac.org";
 	$mailHeaders = "From: " . $name . "<". $email .">\r\n";
-	if(mail($toEmail, $subject, $message, $file, $mailHeaders)) {
+	if(mail($toEmail, $subject, $message, $mailHeaders)) {
 	    echo "E-Mail sent successfully!";
 	}
     else {

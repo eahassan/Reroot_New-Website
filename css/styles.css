@@ -4,6 +4,10 @@ html, body {
 height: 100%;    
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -81,7 +85,7 @@ header, section, footer, aside, nav, main, article, figure {
 }
 
 .dropdown-item:hover {
-    background-color: #87CEEB; /* skyblue */
+    background-color: #87CEEB; /* Lightblue from w3.css */
 }
 
 /*
@@ -302,7 +306,23 @@ main {
 .aslide img {
         width: 800px;
         height: 500px;
-    }
+}
+
+.nav-link-spec {
+    color: yellow;
+}
+
+.fa-seedling {
+    color: palegreen;
+}
+
+.link-style {
+    color: green;
+}
+
+.link-style:hover {
+    color: lime;
+} 
 
 .form-control {
     width: 40%;

@@ -117,19 +117,19 @@
     
       <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
-      <a class="nav-link active" data-toggle="tab" href="#home">General questions</a>
+      <a class="nav-link active" id="nav-general" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">General questions</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" data-toggle="tab" href="#menu1">For Applicants</a>
+      <a class="nav-link" id="nav-applicant" data-toggle="tab" role="tab" aria-controls="menu1" aria-selected="false" href="#menu1">For Applicants</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" data-toggle="tab" href="#menu2">For Utilities</a>
+      <a class="nav-link" id="nav-util" data-toggle="tab" role="tab" aria-controls="menu2" aria-selected="false" href="#menu2">For Utilities</a>
     </li>
   </ul>
 
   <!-- Tab panes -->
   <div class="tab-content">
-    <div id="home" class="container tab-pane active"><br>
+    <div id="home" class="container tab-pane active" role="tabpanel" aria-labelledby="nav-general"><br>
       <h3 class="font-weight-bold font-italic">What is NGICP&#63;</h3>
       <p class="lead text-justify">The National Green Infrastructure Certification Program (NGICP) is a certification program that offers a credential for GI installation, inspection, and maintenance workers that verifies that they have the required knowledge to build, inspect, and maintain sustainable GI systems. It is meant to be an entry-level certification that focuses on knowledge that is important for all three of these groups of workers to possess to carry out their job tasks properly.</p> <br>
       <h3 class="font-weight-bold font-italic">What are all of the GI types that the NGICP covers&#63;</h3>
@@ -143,7 +143,7 @@
         <li>Stormwater wetlands</li>
       </ul><br>
       <h3 class="font-weight-bold font-italic">Why was NGICP created&#63;</h3>
-      <p class="lead text-justify">The NGICP was created to promote skilled individuals who will install, inspect, and maintain green infrastructure (GI) systems and also support community-based job creation, and establish national standards for individuals seeking to work on GI projects. The driver for this joint effort was DC Water’s amended federal consent decree (2005 consent decree, amended in 2016) to construct large-scale GI to manage combined sewer overflows (CSOs) in the District of Columbia, and the Green Jobs Memorandum of Agreement (MOA) between DC Water and the District of Columbia. The consent decree is a legal agreement between DC Water, the District of Columbia, the U.S. Environmental Protection Agency, and the U.S. Department of Justice. Additionally, demand has been growing for a national program to provide credentialed green infrastructure construction and maintenance professionals. The white paper, <a href="http://ngicp.org/project/the-need-for-national-green-infrastructure-training-and-certification/" target="_blank" rel="noopener">The Need for National Green Infrastructure Training and Certification</a>, provides more background on this need.</p> <br>
+      <p class="lead text-justify">The NGICP was created to promote skilled individuals who will install, inspect, and maintain green infrastructure (GI) systems and also support community-based job creation, and establish national standards for individuals seeking to work on GI projects. The driver for this joint effort was DC Water’s amended federal consent decree (2005 consent decree, amended in 2016) to construct large-scale GI to manage combined sewer overflows (CSOs) in the District of Columbia, and the Green Jobs Memorandum of Agreement (MOA) between DC Water and the District of Columbia. The consent decree is a legal agreement between DC Water, the District of Columbia, the U.S. Environmental Protection Agency, and the U.S. Department of Justice. Additionally, demand has been growing for a national program to provide credentialed green infrastructure construction and maintenance professionals. The white paper, <a href="http://ngicp.org/project/the-need-for-national-green-infrastructure-training-and-certification/" target="_blank" rel="noopener" class="link-style">The Need for National Green Infrastructure Training and Certification</a>, provides more background on this need.</p> <br>
       
       <h3 class="font-weight-bold font-italic">Who governs NGICP&#63;</h3>
       <p class="lead text-justify">There are three permanent bodies that govern all aspects of the NGICP to deliver the Green Infrastructure Practioner (GIP) certification. The Strategic Advisory Council (SAC) overses the business and scheme strategies including development of policies and procedures, promotion, advocacy, fiduciary and fundraising. The Certification Committee (CC) reports to the SAC and oversees the maintenance of the certification program. The Technical Advisory Group (TAG), which reports to the CC oversees the technical components of the program.</p> <br>
@@ -157,7 +157,7 @@
       </ul> <br>
       
       <h3 class="font-weight-bold font-italic">Who is the certifying body&#63;</h3>
-      <p class="lead text-justify">The certifying body is Water Environment Federation (WEF), which is a not-for-profit technical and educational organization of 33,000 individual members and 75 affiliated Member Associations representing water quality professionals around the world. The NGICP Certification Council will be the group under the <br> <a href="https://wefstormwaterinstitute.org" target="_blank" rel="noopener">WEF Stormwater Institute</a> that will be awarding the certifications.</p> <br>
+      <p class="lead text-justify">The certifying body is Water Environment Federation (WEF), which is a not-for-profit technical and educational organization of 33,000 individual members and 75 affiliated Member Associations representing water quality professionals around the world. The NGICP Certification Council will be the group under the <br> <a href="https://wefstormwaterinstitute.org" target="_blank" rel="noopener" class="link-style">WEF Stormwater Institute</a> that will be awarding the certifications.</p> <br>
       
       <h3 class="font-weight-bold font-italic">What is the certification process&#63;</h3>
       <p class="lead text-justify">The certification process involves the following steps&#58;</p>
@@ -175,7 +175,7 @@
       
       
     </div>
-    <div id="menu1" class="container tab-pane fade"><br>
+    <div id="menu1" class="container tab-pane fade" role="tabpanel" aria-labelledby="nav-applicant"><br>
       <h3 class="font-weight-bold font-italic">Why should I apply to become NGICP certified&#63; What will it do for me&#63;</h3>
       <p class="lead text-justify">The NGICP certification is a green infrastructure-specific credential that will signify that you possess the foundational knowledge needed to properly perform construction, inspection, and maintenance tasks for GI.
 The credential helps you to stand out among other GI job seekers. Employers will know that you have a solid background knowledge of GI and that you are ready to apply that on a job site. GI project owners will be assured that having certified workers install, inspect, and maintain their GI practices will improve the efficiency, performance, and longevity of their GI investment.</p> <br>
@@ -184,10 +184,10 @@ The credential helps you to stand out among other GI job seekers. Employers will
     <p class="lead text-justify">The eligibility requirements include a high school degree (or equivalent) and completing a GI construction, inspection, and maintenance training program.</p> <br>
         
     <h3 class="font-weight-bold font-italic">How do I get started&#63;</h3>
-    <p class="lead text-justify">The NGICP currently is under development. The first opportunity for individuals to become certified will occur through the Operational Pre-test, which will be offered only through  <a href="http://ngicp.org/about-ngicp/" target="_blank" rel="noopener">NGICP partners</a> in December 2016. In 2017, partners will be offering regional exam dates. The NGICP will be rolled out nationwide in 2018. Details will be available on this site as they are finalized.</p> <br>    
+    <p class="lead text-justify">The NGICP currently is under development. The first opportunity for individuals to become certified will occur through the Operational Pre-test, which will be offered only through  <a href="http://ngicp.org/about-ngicp/" target="_blank" rel="noopener" class="link-style">NGICP partners</a> in December 2016. In 2017, partners will be offering regional exam dates. The NGICP will be rolled out nationwide in 2018. Details will be available on this site as they are finalized.</p> <br>    
         
     </div>
-    <div id="menu2" class="container tab-pane fade"><br>
+    <div id="menu2" class="container tab-pane fade" role="tabpanel" aria-labelledby="nav-util"><br>
       <h3 class="font-weight-bold font-italic">Why participate in the NGICP&#63;</h3>
       <p class="lead text-justify">The NGICP is intended to be a tool to help utilities identify and use skilled workers to construct, inspect, and maintain GI. The program is being developed by the NGICP partner organizations who are a coalition of stormwater leaders from across the country. This group welcomes input from other utilities to help ensure that the program meets the needs of many different GI programs. For more information visit the For Utilities page.</p> <br>
         
