@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Contact Us - Reroot</title>
+    <title>Reroot Pontiac GI - Contact Us</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Evan H.">
     <meta name="description" content="Reroot Pontiac's Green Infrastructure Site">
     <meta name="keywords" content="Reroot Pontiac, Green Infrastructure, Green Technology">
-    <!-- Bootstra 4 CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="theme-color" content="#000000">
+    <!-- Bootstrap 4 CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- FontAwesome Icons and CSS-->   
     <script src="https://kit.fontawesome.com/8c89b82d38.js" crossorigin="anonymous"></script>
     <!-- FontAwesome Social Media Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Google Fonts - Karma -->    
     <link href="https://fonts.googleapis.com/css?family=Karma&display=swap" rel="stylesheet">
-    <!-- Google Fonts - Roboto -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <!-- styles CSS file -->
     <link rel="stylesheet" href="css/styles.css">
     <!-- Favicon -->
     <link rel="shortcut icon" href="images/icons/green-leave.ico">
+    <!-- apple-touch Icon--> 
+   <link rel="apple-touch-icon" href="images/apple-touch-icon-iphone-60x60.png">
 </head>    
 <body>
 <?php
@@ -92,8 +93,9 @@ function test_input($data) {
     <hr>
     <p class="text-center">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
         a matter of hours to help you.</p>
-    <p class="text-center"><span class="error">* Required field</span></p>    
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" id="contact-form" name="contact-form" enctype="multipart/form-data">
+    <p class="text-center"><span class="error">* Required field</span></p> 
+    <div class="card mb-4 bg-paleYellow">  
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" id="contact-form" name="contact-form" enctype="multipart/form-data" class="mt-4 ml-3 mr-3">
             <fieldset>
               <legend class="undrline">Personal Information:</legend>
             <div class="form-group">
@@ -129,13 +131,13 @@ function test_input($data) {
           <input id="uploadBtn" type="file" class="upload float-left" name="file[]" aria-label="Upload file" multiple>
         </div> -->
             
-            <div class="text-center marg-botm">
+            <div class="text-center mb-4">
                 <button type="submit" class="btn btn-submit float-left" name="btnSubmit">Send</button>
             </div>    
                                            
           </fieldset>                                                                                     
           </form> <br><br>
-                
+          </div>       
 </section> 
 </div>
 
@@ -177,9 +179,11 @@ if(!empty($_POST["contact-form"])) {
 	$subject = $_POST["subject"];
 	$message = $_POST["message"];
 //    $file = $_POST["file"];
-
+//    $htmlContent = file_get_contents("email-template.html");
 	$toEmail = "info@rerootpontiac.org";
-	$mailHeaders = "From: " . $name . "<". $email .">\r\n";
+    $mailHeaders = "MIME-Version: 1.0" . "\r\n";
+    $mailHeaders .= "Content-type:text/html;charset=UTF-8" . "\r\n"; 
+	$mailHeaders .= "From: " . $name . "<". $email .">\r\n";
 	if(mail($toEmail, $subject, $message, $mailHeaders)) {
 	    echo "E-Mail sent successfully!";
 	}
@@ -194,17 +198,17 @@ if(!empty($_POST["contact-form"])) {
 </div>
 </main>
                
-  <!-- jQuery -->   
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+<!-- jQuery -->   
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     
- <!-- Popper.JS-->
- <script src="js/Popper.js"></script>
+<!-- Popper.JS-->
+<script src="js/Popper.js"></script>
  
- <!-- Bootstrap minified JS -->
- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- Bootstrap minified JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
  
- <!-- Website's JS -->    
- <script src="js/Site.js"></script>                               
+<!-- Website's JS -->    
+<script src="js/Site.js"></script>                                 
                 
 </body>    
 </html>

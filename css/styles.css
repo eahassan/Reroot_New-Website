@@ -85,7 +85,7 @@ header, section, footer, aside, nav, main, article, figure {
 }
 
 .dropdown-item:hover {
-    background-color: #87CEEB; /* Lightblue from w3.css */
+    background-color: lightsteelblue; /* Lightsteelblue */
 }
 
 /*
@@ -128,16 +128,8 @@ a:hover, a:active {
 }
 */
 
-.nav-marg {
-    margin-bottom: 20px;
-}
-
 .navbar-nav .dropdown:hover>.dropdown-menu {
     display: block;
-}
-
-.container-fluid {
-    padding: 10px 15px;
 }
 
 main {
@@ -228,12 +220,6 @@ main {
     list-style-type: square;
 }
 
-/*
-.para {
-    color: dodgerblue;
-}
-*/
-
 .marg-botm {
     margin-bottom: 25px;
 }
@@ -308,6 +294,10 @@ main {
         height: 500px;
 }
 
+.not-active {
+    color: rebeccapurple;
+}
+
 .nav-link-spec {
     color: yellow;
 }
@@ -322,7 +312,11 @@ main {
 
 .link-style:hover {
     color: lime;
-} 
+}
+
+.bg-paleYellow {
+  background: #ddffdd;   
+}
 
 .form-control {
     width: 40%;
@@ -331,6 +325,7 @@ main {
 input, textarea {
     border-radius: 10px;
     font-family: 'Roboto', sans-serif;
+    color: #aaa;
     font-weight: bolder;
 }
 
@@ -530,6 +525,14 @@ animation-delay: 0.7s;
     
 .form-control {
     width: 80%;
+}
+    
+.logo-contact {
+  width: 300px;  
+}
+    
+legend {
+   text-align: center;        
 }    
     
 
