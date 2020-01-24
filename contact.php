@@ -27,8 +27,9 @@
 <?php
 
   
-// Define variables
-$name = $email = $subject = $message = $file = "";
+// Define variables    
+    
+$name = $email = $subject = $message = "";
 $nameErr = $emailErr = $subjectErr = $messageErr = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -37,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $email = test_input($_POST["email"]);
   $subject = test_input($_POST["subject"]);
   $message = test_input($_POST["message"]);
-  $file = test_input($_POST["file"]);
+//  $file = test_input($_POST["file"]);
     
   if (empty($_POST["name"])) {
     $nameErr = "";
@@ -94,32 +95,32 @@ function test_input($data) {
     <p class="text-center">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
         a matter of hours to help you.</p>
     <p class="text-center"><span class="error">* Required field</span></p> 
-    <div class="card mb-4 bg-paleYellow">  
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" id="contact-form" name="contact-form" enctype="multipart/form-data" class="mt-4 ml-3 mr-3">
+    <div class="card mb-4 bg-Green rounded">  
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" id="contact-form" name="contact-form" enctype="multipart/form-data" class="mt-4 ml-3 mr-3 p-3">
             <fieldset>
               <legend class="undrline">Personal Information:</legend>
             <div class="form-group">
-            <span class="error">* <?php echo $nameErr;?></span>  
-            <label for="name" class="font-weight-bolder">Name:</label>  
-            <input type="text" id="name" name="name" class="form-control input-name" placeholder="Enter your Name" value="<?php echo $name;?>"><br>
+            <span class="error">*</span>
+            <label for="name" class="font-weight-bolder">Name:</label> <span class="error"> <?php echo $nameErr;?></span> 
+            <input type="text" id="name" name="name" class="form-control input-name mb-4" placeholder="Enter your Name" required>
             </div>
                              
             <div class="form-group">
-            <span class="error">* <?php echo $emailErr;?></span> 
-            <label for="email" class="font-weight-bolder">E-Mail:</label>        
-            <input type="text" id="email" name="email" class="form-control input-email" placeholder="Enter your E-Mail" value="<?php echo $email;?>"><br>
+            <span class="error">*</span>  
+            <label for="email" class="font-weight-bolder">E-Mail:</label> <span class="error"> <?php echo $emailErr;?></span>       
+            <input type="text" id="email" name="email" class="form-control input-email mb-4" placeholder="Enter your E-Mail" required>
             </div>
              
             <div class="form-group">
             <span class="error">* <?php echo $subjectErr;?></span>             
-            <label for="subject" class="font-weight-bolder">Subject:</label>     
-            <input type="text" id="subject" name="subject" class="form-control input-subjct" placeholder="Enter your Subject line" value="<?php echo $subject;?>"><br>
+            <label for="subject" class="font-weight-bolder">Subject:</label>  <span class="error"> <?php echo $subjectErr;?></span>   
+            <input type="text" id="subject" name="subject" class="form-control input-subjct mb-4" placeholder="Enter your Subject line" required>
             </div>
                    
             <div class="form-group">
             <span class="error">* <?php echo $messageErr;?></span>            
-            <label for="message" class="font-weight-bolder">Message:</label>        
-            <textarea type="text" id="message" name="message" rows="10" cols="30" class="form-control" placeholder="Your message goes here..."><?php echo $message;?></textarea>
+            <label for="message" class="font-weight-bolder">Message:</label> <span class="error"> <?php echo $messageErr;?></span>        
+            <textarea type="text" id="message" name="message" rows="10" cols="30" class="form-control mb-4" placeholder="Your message goes here..." required></textarea>
             </div>
             
             <!-- Upload file(s) form input field-->
@@ -131,12 +132,12 @@ function test_input($data) {
           <input id="uploadBtn" type="file" class="upload float-left" name="file[]" aria-label="Upload file" multiple>
         </div> -->
             
-            <div class="text-center mb-4">
-                <button type="submit" class="btn btn-submit float-left" name="btnSubmit">Send</button>
+            <div class="text-center">
+                <button type="submit" class="btn btn-submit float-left mb-4" name="btnSubmit">Send</button>
             </div>    
                                            
           </fieldset>                                                                                     
-          </form> <br><br>
+          </form>
           </div>       
 </section> 
 </div>
@@ -173,18 +174,28 @@ function test_input($data) {
 //echo "<br>";
 //echo $file;
 
-if(!empty($_POST["contact-form"])) {
+if (isset($_POST["btnSubmit"])) {
 	$name = $_POST["name"];
 	$email = $_POST["email"];
 	$subject = $_POST["subject"];
 	$message = $_POST["message"];
+    $body = '<!DOCTYPE html> <html>
+        <body>
+         <h2>Reroot Pontiac GI</h2>
+         <hr>
+          <p>Name: <br>'.$name.' </p>
+          <p>Name: <br>'.$subject.' </p>
+          <p>E-Mail: <br>'.$email.' </p>
+         <p> Message: <br>'.$message.' </p>
+        </body>
+    </html>';
 //    $file = $_POST["file"];
 //    $htmlContent = file_get_contents("email-template.html");
 	$toEmail = "info@rerootpontiac.org";
     $mailHeaders = "MIME-Version: 1.0" . "\r\n";
     $mailHeaders .= "Content-type:text/html;charset=UTF-8" . "\r\n"; 
 	$mailHeaders .= "From: " . $name . "<". $email .">\r\n";
-	if(mail($toEmail, $subject, $message, $mailHeaders)) {
+	if(mail($toEmail, $subject, $body, $mailHeaders)) {
 	    echo "E-Mail sent successfully!";
 	}
     else {

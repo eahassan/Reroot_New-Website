@@ -314,8 +314,8 @@ main {
     color: lime;
 }
 
-.bg-paleYellow {
-  background: #ddffdd;   
+.bg-Green {
+  background: #b5e7a0;   
 }
 
 .form-control {
@@ -325,12 +325,12 @@ main {
 input, textarea {
     border-radius: 10px;
     font-family: 'Roboto', sans-serif;
-    color: #aaa;
+    color: #bbb;
     font-weight: bolder;
 }
 
 input[placeholder], input[placeholder="Choose File"], textarea[placeholder] {
-    color: #bbb;
+    color: #039;
     font-weight: bolder;
 }
 
