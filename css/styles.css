@@ -18,6 +18,13 @@ body {
     color: #191970; /* midnightblue */
 }
 
+/*
+.wrapper {
+  max-width: 100%;
+  margin: auto;
+}
+*/
+
 .bg-home {
    background: url("../images/abstract-green_nature-bg.jpg");
 }
@@ -42,7 +49,7 @@ header, section, footer, aside, nav, main, article, figure {
 }
 
 .logo {
-   width:300px;
+   width:200px;
 }
 
 .logo-contact {
@@ -128,9 +135,11 @@ a:hover, a:active {
 }
 */
 
+/*
 .navbar-nav .dropdown:hover>.dropdown-menu {
     display: block;
 }
+*/
 
 main {
     height: auto;
@@ -164,11 +173,19 @@ main {
   text-shadow: 2px 2px 5px #FFFF00;
 }
 
-.carousel-inner > .carousel-item > img { /* Formerly, known as .carousel-inner img ! */
+/* Formerly, known as .carousel-inner img ! */ /* Orginially, 600px !!! */
+.carousel-inner > .carousel-item > img { 
       width: 100%;
-      height: 700px; /* Orginially, 600px !!! */
+      height: 900px; 
       margin: 0 auto;
   }
+
+/*
+.carousel-item .img-fluid {
+  width:100%;
+  height:100%;
+}
+*/
 
 .carousel_Buttons {
     margin-left: 100px;
@@ -353,6 +370,20 @@ input[placeholder], input[placeholder="Choose File"], textarea[placeholder] {
      background-position: 1px 1px; 
      background-repeat: no-repeat;
      padding-left: 45px;
+}
+
+.input-city {
+    background-image: url('../images/icons/city-solid.svg');
+    background-position: 1px 1px; 
+    background-repeat: no-repeat;
+    padding-left: 50px;
+}
+
+.input-field_study {
+    background-image: url('../images/icons/briefcase-solid.svg');
+    background-position: 1px 1px; 
+    background-repeat: no-repeat;
+    padding-left: 45px;
 }
 
 .fileUpload {

@@ -29,14 +29,18 @@
   
 // Define variables    
     
-$name = $email = $subject = $message = "";
-$nameErr = $emailErr = $subjectErr = $messageErr = "";
+$name = $email = $subject = $city = $state = $edulevel = $fieldstudy = $employd = $message = "";
+$nameErr = $emailErr = $subjectErr = $cityErr = $stateErr = $eduErr = $fdstudyErr = $employErr = $messageErr = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
   $name = test_input($_POST["name"]);
   $email = test_input($_POST["email"]);
   $subject = test_input($_POST["subject"]);
+  $city = test_input($_POST["city"]);
+  $state = test_input($_POST["state"]);
+  $edulevel = test_input($_POST["edulevel"]);
+  $employd = test_input($_POST["employd"]);     
   $message = test_input($_POST["message"]);
 //  $file = test_input($_POST["file"]);
     
@@ -65,6 +69,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     $subject = test_input($_POST["subject"]);
   }
+    
+ if (empty($_POST["city"])) {
+    $cityErr = "";
+  } else {
+    $city = test_input($_POST["city"]);
+  }
+    
+ if (empty($_POST["state"])) {
+    $stateErr = "";
+  } else {
+    $state = test_input($_POST["state"]);
+  }
+    
+ if (empty($_POST["edulevel"])) {
+    $eduErr = "";
+  } else {
+    $edulevel = test_input($_POST["edulevel"]);
+  }
+    
+ if (empty($_POST["fieldstudy"])) {
+    $fdstudyErr = "";
+  } else {
+    $fieldstudy = test_input($_POST["fieldstudy"]);
+  }    
+    
+ if (empty($_POST["employd"])) {
+    $employErr = "";
+  } else {
+    $employd = test_input($_POST["employd"]);
+  }     
     
  if (empty($_POST["message"])) {
     $messageErr = "";
@@ -116,6 +150,105 @@ function test_input($data) {
             <label for="subject" class="font-weight-bolder">Subject:</label>  <span class="error"> <?php echo $subjectErr;?></span>   
             <input type="text" id="subject" name="subject" class="form-control input-subjct mb-4" placeholder="Enter your Subject line" required>
             </div>
+                  
+            <div class="form-group">
+            <span class="error">* <?php echo $cityErr;?></span>             
+            <label for="city" class="font-weight-bolder">City:</label>  <span class="error"> <?php echo $cityErr;?></span>   
+            <input type="text" id="city" name="city" class="form-control input-city mb-4" placeholder="Enter your City" required>
+            </div>
+            
+<div class="form-group">
+<span class="error">* <?php echo $stateErr;?></span> 
+<label for="state" class="font-weight-bolder">State:</label>  <span class="error"> <?php echo $stateErr;?></span>         
+<select class="form-control" name="state" id="state" required>
+    <option value="" selected>Select</option>
+	<option value="AL">Alabama</option>
+	<option value="AK">Alaska</option>
+	<option value="AZ">Arizona</option>
+	<option value="AR">Arkansas</option>
+	<option value="CA">California</option>
+	<option value="CO">Colorado</option>
+	<option value="CT">Connecticut</option>
+	<option value="DE">Delaware</option>
+	<option value="DC">District Of Columbia</option>
+	<option value="FL">Florida</option>
+	<option value="GA">Georgia</option>
+	<option value="HI">Hawaii</option>
+	<option value="ID">Idaho</option>
+	<option value="IL">Illinois</option>
+	<option value="IN">Indiana</option>
+	<option value="IA">Iowa</option>
+	<option value="KS">Kansas</option>
+	<option value="KY">Kentucky</option>
+	<option value="LA">Louisiana</option>
+	<option value="ME">Maine</option>
+	<option value="MD">Maryland</option>
+	<option value="MA">Massachusetts</option>
+	<option value="MI">Michigan</option>
+	<option value="MN">Minnesota</option>
+	<option value="MS">Mississippi</option>
+	<option value="MO">Missouri</option>
+	<option value="MT">Montana</option>
+	<option value="NE">Nebraska</option>
+	<option value="NV">Nevada</option>
+	<option value="NH">New Hampshire</option>
+	<option value="NJ">New Jersey</option>
+	<option value="NM">New Mexico</option>
+	<option value="NY">New York</option>
+	<option value="NC">North Carolina</option>
+	<option value="ND">North Dakota</option>
+	<option value="OH">Ohio</option>
+	<option value="OK">Oklahoma</option>
+	<option value="OR">Oregon</option>
+	<option value="PA">Pennsylvania</option>
+	<option value="RI">Rhode Island</option>
+	<option value="SC">South Carolina</option>
+	<option value="SD">South Dakota</option>
+	<option value="TN">Tennessee</option>
+	<option value="TX">Texas</option>
+	<option value="UT">Utah</option>
+	<option value="VT">Vermont</option>
+	<option value="VA">Virginia</option>
+	<option value="WA">Washington</option>
+	<option value="WV">West Virginia</option>
+	<option value="WI">Wisconsin</option>
+	<option value="WY">Wyoming</option>
+</select>
+</div>                      
+                  
+            <div class="form-group">
+            <span class="error">* <?php echo $eduErr;?></span>   
+            <label for="edulevel" class="font-weight-bolder">Education Level &#40;only GED required&#41;:</label>
+            <span class="error"> <?php echo $eduErr;?></span>
+            <select class="form-control" name="edulevel" id="edulevel">
+               <option value="" selected>Select</option>
+                <option value="GED">GED</option>
+                <option value="Some College">Some College</option>
+                <option value="Associate's Degree">Associate&#39;s</option>
+                <option value="Bachellor's Degree">Bachellor&#39;s</option>
+                <option value="Master's Degree">Master&#39;s</option>
+                <option value="PhD Degree">PhD</option>
+            </select>
+            </div>
+                  
+            <div class="form-group">
+            <span class="error">* <?php echo $subjectErr;?></span>             
+            <label for="fieldstudy" class="font-weight-bolder">Field of Study:</label>  <span class="error"> <?php echo $subjectErr;?></span>   
+            <input type="text" id="fieldstudy" name="fieldstudy" class="form-control input-field_study mb-4" placeholder="Enter your Field of Study" required>
+            </div>
+<div>                 
+<p class="lead"> <span class="error mr-2">*</span>Are you currently employed&#63;</p>                        
+<div class="form-check-inline">    
+  <label class="form-check-label">
+    <input type="radio" class="form-check-input mb-4" name="employd" value="Employed">Yes
+  </label>
+</div>
+<div class="form-check-inline">
+  <label class="form-check-label">
+    <input type="radio" class="form-check-input mb-4" name="employd" value="Not employed">No
+  </label>
+</div>
+</div>                         
                    
             <div class="form-group">
             <span class="error">* <?php echo $messageErr;?></span>            
@@ -170,28 +303,48 @@ function test_input($data) {
 //echo "<br>";
 //echo $subject;
 //echo "<br>";
-//echo $message;
+//echo $city;
 //echo "<br>";
+//echo $state;
+//echo "<br>";
+//echo $edulevel;
+//echo "<br>";
+//echo $fieldstudy;    
+//echo "<br>";
+//echo $employd;
+//echo "<br>";
+//echo $message;
+//echo "<br>";    
 //echo $file;
 
 if (isset($_POST["btnSubmit"])) {
 	$name = $_POST["name"];
 	$email = $_POST["email"];
 	$subject = $_POST["subject"];
+    $city = $_POST["city"];
+    $state = $_POST["state"];
+    $edulevel = $_POST["edulevel"];
+    $fieldstudy = $_POST["fieldstudy"];  
+    $employd = $_POST["employd"];
 	$message = $_POST["message"];
     $body = '<!DOCTYPE html> <html>
         <body>
          <h2>Reroot Pontiac GI</h2>
          <hr>
           <p>Name: <br>'.$name.' </p>
-          <p>Name: <br>'.$subject.' </p>
+          <p>Subject: <br>'.$subject.' </p>
           <p>E-Mail: <br>'.$email.' </p>
+          <p>City: <br>'.$city.' </p>
+          <p>State: <br>'.$state.' </p>
+           <p>Education Level: <br>'.$edulevel.' </p>
+           <p>Field of Study: <br>'.$fieldstudy.' </p>
+           p>Employment status: <br>'.$employd.' </p>
          <p> Message: <br>'.$message.' </p>
         </body>
     </html>';
 //    $file = $_POST["file"];
 //    $htmlContent = file_get_contents("email-template.html");
-	$toEmail = "info@rerootpontiac.org";
+	$toEmail = "info@rerootgi.com";
     $mailHeaders = "MIME-Version: 1.0" . "\r\n";
     $mailHeaders .= "Content-type:text/html;charset=UTF-8" . "\r\n"; 
 	$mailHeaders .= "From: " . $name . "<". $email .">\r\n";
