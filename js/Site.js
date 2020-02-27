@@ -1,6 +1,6 @@
 /* Site.js File */
 
-
+    // Navbar dropdown animations
 	$(document).ready(function () {
 $('.navbar-light .dmenu').hover(function () {
         $(this).find('.sm-menu').first().stop(true, true).slideDown(150);
@@ -9,7 +9,7 @@ $('.navbar-light .dmenu').hover(function () {
     });
 });
 
-
+// Carousel - Play & Pause buttons
 $(function () {
     // Click on play button, so carousel can keep sliding between images!
     $('#playBtn').click(function () {
@@ -23,10 +23,21 @@ $(function () {
     
     });
 
-/* Tooltips */   
-$(document).ready(function(){
+// Tooltips  
+$(document).ready(function() {
   $('[data-toggle="tooltip"]').tooltip();   
 });
+
+//
+
+// Alerts
+$(document).ready(function() {
+      $(".close").click(function() {
+        $('#success').alert("close");
+          $('#fail').alert("close"); 
+  });
+});
+
 
 //document.getElementById("uploadBtn").onchange = function () {
 //    document.getElementById("uploadFile").value = this.value;

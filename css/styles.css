@@ -19,13 +19,6 @@ body {
     color: #191970; /* midnightblue */
 }
 
-/*
-.wrapper {
-  max-width: 100%;
-  margin: auto;
-}
-*/
-
 .bg-home {
    background: url("../images/abstract-green_nature-bg.jpg");
 }
@@ -58,7 +51,6 @@ header, section, footer, aside, nav, main, article, figure {
 }
 
 .logo-foot {
-/*    width: 300px;*/
     float: left;
     padding: 20px;
 }
@@ -96,12 +88,6 @@ header, section, footer, aside, nav, main, article, figure {
     background-color: #add8e6; /* Lightblue */
 }
 
-/*
-.dropdown-item:active {
-    color: cornflowerblue;
-}
-*/
-
 *:focus {
     outline-color: #191970; /* midnightblue */
 }
@@ -121,6 +107,7 @@ main {
 .jumbotron {
     background: url("../images/sprout-bg-2.jpg") no-repeat scroll center bottom;
     line-height: 2.1;
+/*    outline: 1px solid #ddd;*/
 }
 
 .card, .card-header, .card-body {
@@ -144,12 +131,9 @@ main {
     }
 }
 
-#carouselHead {
-  visibility: hidden;
-}
-
 .text-shandow {
   color: #001b92;
+  letter-spacing: 3px;
   text-shadow: 2px 2px 5px lightgreen;
 }
 
@@ -180,7 +164,7 @@ main {
     bottom: 35px;
     right: 0px;
     align-self: center;
-    z-index: 9999;
+    z-index: 1;
 }
 
 .carousel-inner {
@@ -216,6 +200,7 @@ main {
 }
 
 #playBtn, #pauseBtn {
+    padding: 5px;
     border-radius: 80%;
     font-size: 1.25rem;
 }
@@ -224,16 +209,16 @@ main {
     list-style-type: square;
 }
 
-.marg-botm {
-    margin-bottom: 25px;
-}
-
 .fa-facebook, .fa-twitter, .fa-youtube, .fa-instagram {
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 5px;
     color: darkorange;
     text-align: center;
+}
+
+.fa-home {
+    color: forestgreen;
 }
 
 .addr-foot {
@@ -251,9 +236,6 @@ main {
 
 #footer {
    position: absolute;
-   clear: both;
-/*   bottom: 0;*/
-/*   left: 0px;    */
    width: 100%;
    height: auto;
 }

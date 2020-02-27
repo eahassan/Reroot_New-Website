@@ -24,47 +24,51 @@
    <link rel="apple-touch-icon" href="images/apple-touch-icon-iphone-60x60.png">
 </head>    
 <body>
-<?php
+<main id="mainContent" tabindex="-1">
+<div class="container-fluid">
+<div class="row">
+<!-- https://mdbootstrap.com/docs/jquery/forms/contact/#antispam -->     
+<div class="col-md-12">
+<section>
+   <h1 class="font-weight-bold text-center">Contact Us</h1>
+    <img src="images/logo_2.png" alt="Reroot Pontiac's Logo" class="logo-contact mx-auto d-block">
+    <?php
 
   
 // Define variables    
     
 $compname = $email = $subject = $city = $state = $attends = $message = "";
 $compnameErr = $emailErr = $subjectErr = $cityErr = $stateErr = $attendErr = $messageErr = "";
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+$success_message = "<strong class='mr-2'>E-Mail sent successfully!</strong> <a href='index.html' class='alert-link'><span class='mr-2'><i class='fas fa-home'></i></span>Back to Home!</a>";
+$error_message = "Error occurred - E-Mail Failure";
     
-  $compname = test_input($_POST["compname"]);
-  $email = test_input($_POST["email"]);
-  $subject = test_input($_POST["subject"]);
-  $city = test_input($_POST["city"]);
-  $state = test_input($_POST["state"]);
-  $attends = test_input($_POST["attends"]);    
-  $message = test_input($_POST["message"]);
-//  $file = test_input($_POST["file"]);
+if (isset($_POST["btnSubmit"])) {
+	$compname = $_POST["compname"];
+	$email = $_POST["email"];
+	$subject = $_POST["subject"];
+    $city = $_POST["city"];
+    $state = $_POST["state"]; 
+    $attends = $_POST["attends"];
+	$message = $_POST["message"];
     
-  if (empty($_POST["compname"])) {
-    $compnameErr = "";
+    
+  if (empty($_POST["compname"]) ?? "") {
+    $compnameErr = " A Company Name is Required!";
   } else {
     $compname = test_input($_POST["compname"]);
-    // check if name only contains letters and whitespace
-    if (!preg_match("/^[a-zA-Z ]*$/",$compname)) {
-      $nameErr = "Only letters and white space allowed"; 
-    }
   }
   
-  if (empty($_POST["email"])) {
-    $emailErr = "";
+  if (empty($_POST["email"]) ?? "") {
+    $emailErr = "E-Mail is Required!";
   } else {
     $email = test_input($_POST["email"]);
-    // check if e-mail address is well-formed
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-      $emailErr = "Invalid email format"; 
-    }
+    if (!preg_match("/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i",$email)) {
+      $emailErr = "Enter a valid E-Mail!"; 
+       }
   }
     
- if (empty($_POST["subject"])) {
-    $subjectErr = "";
+ if (empty($_POST["subject"]) ?? "") {
+    $subjectErr = "A Subject is Required!";
   } else {
     $subject = test_input($_POST["subject"]);
   }
@@ -87,12 +91,39 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $attends = test_input($_POST["attends"]);
   }     
     
- if (empty($_POST["message"])) {
-    $messageErr = "";
+ if (empty($_POST["message"]) ?? "") {
+    $messageErr = "Message is Required!";
   } else {
     $message = test_input($_POST["message"]);
-  }    
-    
+  }
+
+if ( ($compname != '') && ($email != '' && (filter_var ($email, FILTER_VALIDATE_EMAIL)) ) && ($subject != '') && ($message != '') ) {     
+    $body = '<!DOCTYPE html> <html>
+        <body>
+         <h2>Reroot Pontiac GI</h2>
+         <hr>
+          <p>Company Name: <br>'.$compname.' </p>
+          <p>Subject: <br>'.$subject.' </p>
+          <p>E-Mail: <br>'.$email.' </p>
+          <p>City: <br>'.$city.' </p>
+          <p>State: <br>'.$state.' </p>
+          <p>Attendee List: <br>'.$attends.' </p>
+          <p>Message: <br>'.$message.' </p>
+        </body>
+    </html>';
+//    $file = $_POST["file"];
+//    $htmlContent = file_get_contents("email-template.html");
+	$toEmail = "info@rerootgi.com";
+    $mailHeaders = "MIME-Version: 1.0" . "\r\n";
+    $mailHeaders .= "Content-type:text/html;charset=UTF-8" . "\r\n"; 
+	$mailHeaders .= "From: " . $name . "<". $email .">\r\n";
+	if(mail($toEmail, $subject, $body, $mailHeaders)) {
+	    echo "<div class='alert alert-success alert-dismissible fade show mt-3' role='alert' id='success'><button type='button' class='close' aria-label='Close' title='Close'> <span aria-hidden='true'>&times;</span> </button> $success_message</div>";
+	}
+    else {
+        echo "<div class='alert alert-danger alert-dismissible fade show mt-3' role='alert' id='fail'><button type='button' class='close' aria-label='Close' title='Close'> <span aria-hidden='true'>&times;</span> </button> $error_message</div>";
+}    
+}
 }
     
 function test_input($data) {
@@ -102,16 +133,29 @@ function test_input($data) {
   return $data;
 }
     
-?>
+    
+/* Upload functionality */    
+//include "upload.php";
+    
+//echo "<h2>Your Input:</h2>";
+//echo $compname;  
+//echo "<br>";
+//echo $email;
+//echo "<br>";
+//echo $subject;
+//echo "<br>";
+//echo $city;
+//echo "<br>";
+//echo $state;
+//echo "<br>";
+//echo $attends;
+//echo "<br>";
+//echo $message;
+//echo "<br>";    
+//echo $file;
 
-<main id="mainContent" tabindex="-1">
-<div class="container-fluid">
-<div class="row">
-<!-- https://mdbootstrap.com/docs/jquery/forms/contact/#antispam -->     
-<div class="col-md-12">
-<section>
-   <h1 class="font-weight-bold text-center">Contact Us</h1>
-    <img src="images/logo_2.png" alt="Reroot Pontiac's Logo" class="logo-contact mx-auto d-block">
+    
+?>
     <hr>
     <p class="text-center">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
         a matter of hours to help you.</p>
@@ -123,31 +167,29 @@ function test_input($data) {
             <div class="form-group">
             <span class="error">*</span>
             <label for="compname" class="font-weight-bolder">Company Name:</label> <span class="error"> <?php echo $compnameErr;?></span> 
-            <input type="text" id="compname" name="compname" class="form-control input-name mb-4" placeholder="Enter your Company Name" required>
+            <input type="text" id="compname" name="compname" class="form-control input-name mb-4" placeholder="Enter your Company Name" autofocus>
             </div>
                              
             <div class="form-group">
             <span class="error">*</span>  
             <label for="email" class="font-weight-bolder">E-Mail:</label> <span class="error"> <?php echo $emailErr;?></span>       
-            <input type="text" id="email" name="email" class="form-control input-email mb-4" placeholder="Enter your E-Mail" required>
+            <input type="text" id="email" name="email" class="form-control input-email mb-4" placeholder="Enter your E-Mail">
             </div>
              
             <div class="form-group">
-            <span class="error">* <?php echo $subjectErr;?></span>             
+            <span class="error">*</span>             
             <label for="subject" class="font-weight-bolder">Subject:</label>  <span class="error"> <?php echo $subjectErr;?></span>   
-            <input type="text" id="subject" name="subject" class="form-control input-subjct mb-4" placeholder="Enter your Subject line" required>
+            <input type="text" id="subject" name="subject" class="form-control input-subjct mb-4" placeholder="Enter your Subject line">
             </div>
                   
-            <div class="form-group">
-            <span class="error">* <?php echo $cityErr;?></span>             
+            <div class="form-group">             
             <label for="city" class="font-weight-bolder">City:</label>  <span class="error"> <?php echo $cityErr;?></span>   
-            <input type="text" id="city" name="city" class="form-control input-city mb-4" placeholder="Enter your City" required>
+            <input type="text" id="city" name="city" class="form-control input-city mb-4" placeholder="Enter your City">
             </div>
             
 <div class="form-group">
-<span class="error">* <?php echo $stateErr;?></span> 
 <label for="state" class="font-weight-bolder">State:</label>  <span class="error"> <?php echo $stateErr;?></span>         
-<select class="form-control" name="state" id="state" required>
+<select class="form-control" name="state" id="state">
     <option value="" selected>Select</option>
 	<option value="AL">Alabama</option>
 	<option value="AK">Alaska</option>
@@ -203,16 +245,15 @@ function test_input($data) {
 </select>
 </div>                      
                   
-            <div class="form-group">
-            <span class="error">* <?php echo $attendErr;?></span>            
+            <div class="form-group">          
             <label for="attends" class="font-weight-bolder">Attendees:</label> <span class="error"> <?php echo $attendErr;?></span>        
-            <textarea type="text" id="attends" name="attends" rows="10" cols="30" class="form-control mb-4" placeholder="Enter your list of attendees" required></textarea>
+            <textarea type="text" id="attends" name="attends" rows="10" cols="30" class="form-control mb-4" placeholder="Enter your list of attendees"></textarea>
             </div>           
                    
             <div class="form-group">
-            <span class="error">* <?php echo $messageErr;?></span>            
+            <span class="error">*</span>            
             <label for="message" class="font-weight-bolder">Message:</label> <span class="error"> <?php echo $messageErr;?></span>        
-            <textarea type="text" id="message" name="message" rows="10" cols="30" class="form-control mb-4" placeholder="Your message goes here..." required></textarea>
+            <textarea type="text" id="message" name="message" rows="10" cols="30" class="form-control mb-4" placeholder="Your message goes here..."></textarea>
             </div>
             
             <!-- Upload file(s) form input field-->
@@ -248,67 +289,7 @@ function test_input($data) {
                     <p class="lead">info@rerootpontiac.org</p>
                 </li>
             </ul>
-        </div>
-<?php
-    
-    
-/* Upload functionality */    
-//include "upload.php";
-    
-//echo "<h2>Your Input:</h2>";
-//echo $compname;  
-//echo "<br>";
-//echo $email;
-//echo "<br>";
-//echo $subject;
-//echo "<br>";
-//echo $city;
-//echo "<br>";
-//echo $state;
-//echo "<br>";
-//echo $attends;
-//echo "<br>";
-//echo $message;
-//echo "<br>";    
-//echo $file;
-
-if (isset($_POST["btnSubmit"])) {
-	$compname = $_POST["compname"];
-	$email = $_POST["email"];
-	$subject = $_POST["subject"];
-    $city = $_POST["city"];
-    $state = $_POST["state"]; 
-    $attends = $_POST["attends"];
-	$message = $_POST["message"];
-    $body = '<!DOCTYPE html> <html>
-        <body>
-         <h2>Reroot Pontiac GI</h2>
-         <hr>
-          <p>Company Name: <br>'.$compname.' </p>
-          <p>Subject: <br>'.$subject.' </p>
-          <p>E-Mail: <br>'.$email.' </p>
-          <p>City: <br>'.$city.' </p>
-          <p>State: <br>'.$state.' </p>
-          <p>Attendee List: <br>'.$attends.' </p>
-          <p>Message: <br>'.$message.' </p>
-        </body>
-    </html>';
-//    $file = $_POST["file"];
-//    $htmlContent = file_get_contents("email-template.html");
-	$toEmail = "info@rerootgi.com";
-    $mailHeaders = "MIME-Version: 1.0" . "\r\n";
-    $mailHeaders .= "Content-type:text/html;charset=UTF-8" . "\r\n"; 
-	$mailHeaders .= "From: " . $name . "<". $email .">\r\n";
-	if(mail($toEmail, $subject, $body, $mailHeaders)) {
-	    echo "E-Mail sent successfully!";
-	}
-    else {
-        echo "Error occurred - E-Mail Failure";
-    }
-}    
-    
-    
-?>        
+        </div>       
 </div>
 </div>
 </main>

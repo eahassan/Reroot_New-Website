@@ -33,9 +33,11 @@ var aslider = {
                 muteButton.setAttribute('class', aslider.muteButtonClass);
                 muteButton.setAttribute('style', aslider.muteIconStyle);
                 muteButton.setAttribute('data-state', 100);
+                muteButton.setAttribute('aria-label', 'Mute/Unmute button');
                 muteButton.setAttribute('onclick', 'aslider.toggleAudio(' + sliderIndex + ')');
                 var muteIcon = document.createElement('img');
                 muteIcon.setAttribute('src', aslider.audioLoudIcon);
+                muteIcon.setAttribute('alt', '');
                 muteIcon.setAttribute('style', 'width: inherit; height: inherit;');
                 muteButton.appendChild(muteIcon);
                 currentSlider.appendChild(muteButton);
@@ -51,9 +53,11 @@ var aslider = {
                 pauseButton.setAttribute('style', aslider.playPauseIconStyle);
                 pauseButton.setAttribute('class', aslider.pauseButtonClass);
                 pauseButton.setAttribute('data-state', 'play');
+                pauseButton.setAttribute('aria-label', 'Pause/Play button');
                 pauseButton.setAttribute('onclick', 'aslider.toggleState(' + sliderIndex + ')');
                 var pauseIcon = document.createElement('img');
                 pauseIcon.setAttribute('src', aslider.pauseIcon);
+                pauseIcon.setAttribute('alt', '');
                 pauseIcon.setAttribute('style', 'width: inherit; height: inherit');
                 pauseButton.appendChild(pauseIcon);
                 currentSlider.appendChild(pauseButton);
