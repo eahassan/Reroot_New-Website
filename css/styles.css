@@ -24,7 +24,7 @@ body {
 }
 
 header, section, footer, aside, nav, main, article, figure {
-    display: block; 
+    display: block;
 }
 
 .skip-link {
@@ -47,7 +47,7 @@ header, section, footer, aside, nav, main, article, figure {
 }
 
 .logo-contact {
-  width:500px;  
+  width:500px;
 }
 
 .logo-foot {
@@ -63,7 +63,7 @@ header, section, footer, aside, nav, main, article, figure {
     color: #000000;
 }
 
-.nav-item::after { 
+.nav-item::after {
    content:'';
    display:block;
    width:0px;
@@ -145,9 +145,9 @@ main {
 
 /* Formerly, known as .carousel-inner img ! */ /* Orginially, 600px !!! */
 /*
-.carousel-inner > .carousel-item > img { 
+.carousel-inner > .carousel-item > img {
       width: 100%;
-      height: 100%; 
+      height: 100%;
       margin: 0 auto;
   }
 */
@@ -301,7 +301,7 @@ main {
 }
 
 .bg-Green {
-  background: #b5e7a0;   
+  background: #b5e7a0;
 }
 
 .form-control {
@@ -322,35 +322,35 @@ input[placeholder], input[placeholder="Choose File"], textarea[placeholder] {
 
 .input-name {
     background-image: url('../images/icons/user-solid.svg');
-     background-position: 1px 1px; 
+     background-position: 1px 1px;
      background-repeat: no-repeat;
      padding-left: 45px;
 }
 
 .input-email {
     background-image: url('../images/icons/envelope-solid.svg');
-     background-position: 1px 1px; 
+     background-position: 1px 1px;
      background-repeat: no-repeat;
      padding-left: 45px;
 }
 
 .input-subjct {
     background-image: url('../images/icons/leaf-solid.svg');
-     background-position: 1px 1px; 
+     background-position: 1px 1px;
      background-repeat: no-repeat;
      padding-left: 45px;
 }
 
 .input-city {
     background-image: url('../images/icons/city-solid.svg');
-    background-position: 1px 1px; 
+    background-position: 1px 1px;
     background-repeat: no-repeat;
     padding-left: 50px;
 }
 
 .input-field_study {
     background-image: url('../images/icons/briefcase-solid.svg');
-    background-position: 1px 1px; 
+    background-position: 1px 1px;
     background-repeat: no-repeat;
     padding-left: 45px;
 }
@@ -456,30 +456,30 @@ animation-delay: 0.7s;
 
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) { /* Laptops and Desktops */
-    
+
     .aslider {
     width: 60%;
     height: 700px;
     margin: auto;
 }
-    
+
     .aslide img {
         width: 700px;
         height: 400px;
     }
-    
+
     .slide-container {
     margin: 20px 20px;
 }
-    
+
 }
 
 @media only screen and (min-width: 768px) and (max-width: 992px) { /* Tablets, Laptops */
-    
+
 .nav-link {
     font-size: 1.05rem; /* 16px */
 }
-    
+
         .aslider {
     width: 80%;
     height: 500px;
@@ -487,30 +487,30 @@ animation-delay: 0.7s;
     margin-top: 30px;
     margin: auto;
 }
-    
+
  .aslide img {
         width: 600px;
         height: 300px;
     }
-    
+
     .slide-container {
     margin: 0;
 }
-    
+
 }
 
 @media only screen and (min-width: 0px) and (max-width: 580px) { /* Phones & other small devices */
-    
+
     .logo {
         margin: auto 30px;
     }
-    
+
     .logo-foot {
         float: none;
         display: block;
         margin: auto;
     }
-    
+
 /*
     .aslider {
     width: 100%;
@@ -519,32 +519,27 @@ animation-delay: 0.7s;
     margin-top: 30px;
     margin: auto;
 }
-    
+
 .slide-container {
     margin: 0;
-}    
+}
 */
-    
+
 .aslider {
     width: 100%;
     height: 500px;
     margin: auto;
 }
-    
+
 .form-control {
     width: 80%;
 }
-    
-.logo-contact {
-  width: 300px;  
-}
-    
-legend {
-   text-align: center;        
-}    
-    
 
-    
-    
-    
+.logo-contact {
+  width: 300px;
+}
+
+legend {
+   text-align: center;
+}
 }

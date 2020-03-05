@@ -10,19 +10,20 @@
     <meta name="theme-color" content="#000000">
     <!-- Bootstrap 4 CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <!-- FontAwesome Icons and CSS-->   
+    <!-- FontAwesome Icons and CSS-->
     <script src="https://kit.fontawesome.com/8c89b82d38.js" crossorigin="anonymous"></script>
     <!-- FontAwesome Social Media Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Google Fonts - Karma -->    
+    <!-- Google Fonts - Karma -->
     <link href="https://fonts.googleapis.com/css?family=Karma&display=swap" rel="stylesheet">
-    <!-- styles CSS file -->
+    <!-- styles CSS files -->
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/nathan.css">
     <!-- Favicon -->
     <link rel="shortcut icon" href="images/icons/green-leave.ico">
-    <!-- apple-touch Icon--> 
+    <!-- apple-touch Icon-->
    <link rel="apple-touch-icon" href="images/apple-touch-icon-iphone-60x60.png">
-</head>    
+</head>
 <body>
     <!-- Skip link nav info: https://webaim.org/techniques/skipnav/ -->
     <a href="#mainContent" class="skip-link sr-only sr-only-focusable" title="Skip to main content">Skip to main content</a>
@@ -46,23 +47,23 @@
         <a class="dropdown-item" href="green_infrastructure.html">What is GI&#63;</a>
         <a class="dropdown-item" href="programs.html">Programs</a>
 <!--        <a class="dropdown-item" href="#">Page 3</a>  -->
-      </div>    
+      </div>
       </li>
    <li class="nav-item mr-4">
         <a class="nav-link" href="https://ngicp.org/library/" target="_blank" rel="noopener">NGICP Resources</a>
-   </li>    
+   </li>
     <li class="nav-item mr-4">
         <a class="nav-link" href="https://rerootpontiac.org" target="_blank" rel="noopener">Reroot</a>
     </li>
     <li class="nav-item mr-4">
         <a class="nav-link" href="contact.php">Contact Us</a>
-    </li> 
+    </li>
 <!--
    <li class="nav-item">
         <a class="nav-link" href="#">Link 5</a>
    </li>
 -->
-   
+
 <!--
    <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbardrop3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -73,151 +74,51 @@
         <a class="dropdown-item" href="#">Link 2</a>
         <a class="dropdown-item" href="#">Link 3</a>
       </div>
-    </li> 
+    </li>
 -->
-    
+
     </ul>
-  </div>  
-</nav>   
-    
- <main id="mainContent" tabindex="-1">
-   <div class="container-fluid">
-    <div class="row">
-
-   
-   <div class="col-md-12">
-    <header>
-     <h1 class="font-weight-bold text-center font-italic animate-left">What is Green Infrastructure&#63;</h1>
-    </header>
-           
-           <!-- Reference: https://github.com/varunnaik/A-Slider -->
-           <div class="slide-container">
-           <div id="slider" class="aslider" data-duration="10">
-            <div class="aslide" data-duration="5">
-                <img src="images/GI-tech.jpg" alt="GI technologies">
-                <div class="text">Green Infrastructure technologies</div>
-            </div>  
-            <div class="aslide" data-duration="5">
-                <img src="images/Rain_Garden.jpg" alt="Rain garden">
-                <div class="text">Rain garden</div>
-            </div>
-            <div class="aslide" data-duration="5">
-                <img src="images/green-roof.jpg" alt="Green roof">
-                <div class="text">Green roofs</div>
-               </div>
-            <div class="aslide" data-duration="5">
-                <img src="images/rain_barrels.jpg" alt="Rain barrels">
-                <div class="text">Rain barrel</div>
-            </div>
-            <div class="aslide" data-duration="5">
-                <img src="images/permeable_pvmnt.jpg" alt="Permeable pavement">
-                <div class="text">Permeable pavement</div>
-            </div>
-        </div>
-        </div>
-    
-     <p class="lead text-justify">Stormwater management practices that protect, restore, or mimic the natural water cycle process are referred to as green infrastructure (GI). Some of these practices include the use of trees and vegetation (Ex&#58; rain gardens and green roofs) while others do not (Ex&#58; rain barrels and permeable pavement). However, all green infrastructure does work to capture and store precipitation near where it falls so it can be managed in a way to deliver environmental, social, and economic benefits.
-     </p>  <hr> 
-    
-      <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
-      <a class="nav-link active not-active" id="nav-general" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><span class="mr-2"><i class="fas fa-question-circle"></i></span>General Questions</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link not-active" id="nav-applicant" data-toggle="tab" role="tab" aria-controls="menu1" aria-selected="false" href="#menu1"><span class="mr-2"><i class="fas fa-users"></i></span>For Applicants</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link not-active" id="nav-util" data-toggle="tab" role="tab" aria-controls="menu2" aria-selected="false" href="#menu2"><span class="mr-2"><i class="fas fa-cog"></i></span>For Utilities</a>
-    </li>
-  </ul>
-
-  <!-- Tab panes -->
-  <div class="tab-content">
-    <div id="home" class="container tab-pane active" role="tabpanel" aria-labelledby="nav-general"><br>
-      <h3 class="font-weight-bold font-italic">What is NGICP&#63;</h3>
-      <p class="lead text-justify">The National Green Infrastructure Certification Program (NGICP) is a certification program that offers a credential for GI installation, inspection, and maintenance workers that verifies that they have the required knowledge to build, inspect, and maintain sustainable GI systems. It is meant to be an entry-level certification that focuses on knowledge that is important for all three of these groups of workers to possess to carry out their job tasks properly.</p> <br>
-      <h3 class="font-weight-bold font-italic">What are all of the GI types that the NGICP covers&#63;</h3>
-      <p class="lead text-justify">The NGICP covers the following GI types&#58;</p> 
-      <ul class="list-style">
-        <li>Bioretention (includes rain gardens, curb cuts/curb extension, stormwater planters/tree boxes, tree trenches, and bioswales/vegetated swales)</li>
-        <li>Permeable pavements (porous asphalt, pervious concrete, pervious pavers)</li>
-        <li>Rainwater harvesting (rain barrels and cisterns)</li>
-        <li>Rooftop detention practices (green roofs and blue roofs)</li>
-        <li>Dry wells</li>
-        <li>Stormwater wetlands</li>
-      </ul><br>
-      <h3 class="font-weight-bold font-italic">Why was NGICP created&#63;</h3>
-      <p class="lead text-justify">The NGICP was created to promote skilled individuals who will install, inspect, and maintain green infrastructure (GI) systems and also support community-based job creation, and establish national standards for individuals seeking to work on GI projects. The driver for this joint effort was DC Water’s amended federal consent decree (2005 consent decree, amended in 2016) to construct large-scale GI to manage combined sewer overflows (CSOs) in the District of Columbia, and the Green Jobs Memorandum of Agreement (MOA) between DC Water and the District of Columbia. The consent decree is a legal agreement between DC Water, the District of Columbia, the U.S. Environmental Protection Agency, and the U.S. Department of Justice. Additionally, demand has been growing for a national program to provide credentialed green infrastructure construction and maintenance professionals. The white paper, <a href="http://ngicp.org/project/the-need-for-national-green-infrastructure-training-and-certification/" target="_blank" rel="noopener" class="link-style">The Need for National Green Infrastructure Training and Certification</a>, provides more background on this need.</p> <br>
-      
-      <h3 class="font-weight-bold font-italic">Who governs NGICP&#63;</h3>
-      <p class="lead text-justify">There are three permanent bodies that govern all aspects of the NGICP to deliver the Green Infrastructure Practioner (GIP) certification. The Strategic Advisory Council (SAC) overses the business and scheme strategies including development of policies and procedures, promotion, advocacy, fiduciary and fundraising. The Certification Committee (CC) reports to the SAC and oversees the maintenance of the certification program. The Technical Advisory Group (TAG), which reports to the CC oversees the technical components of the program.</p> <br>
-      
-      <h3 class="font-weight-bold font-italic">What are NGICP’s missions and objectives&#63;</h3>
-      <p class="lead text-justify">NGICP’s primary objectives are to:</p>
-      <ul class="list-style">
-       <li>Provide a pool of skilled workers to construct, inspect, and maintain GI to support the long-term performance of these systems</li>
-       <li>Support efforts to catalyze sustainable employment within local communities</li>
-       <li>Create career opportunities with livable wages through GI investments</li>
-      </ul> <br>
-      
-      <h3 class="font-weight-bold font-italic">Who is the certifying body&#63;</h3>
-      <p class="lead text-justify">The certifying body is Water Environment Federation (WEF), which is a not-for-profit technical and educational organization of 33,000 individual members and 75 affiliated Member Associations representing water quality professionals around the world. The NGICP Certification Council will be the group under the <br> <a href="https://wefstormwaterinstitute.org" target="_blank" rel="noopener" class="link-style">WEF Stormwater Institute</a> that will be awarding the certifications.</p> <br>
-      
-      <h3 class="font-weight-bold font-italic">What is the certification process&#63;</h3>
-      <p class="lead text-justify">The certification process involves the following steps&#58;</p>
-      <ul class="list-style">
-        <li>Meeting the eligibility criteria</li>
-        <li>Attending a GI training course in your region</li>
-        <li>Submitting a certification application form and fees</li>
-        <li>Taking the exam and receiving a passing grade</li>
-      </ul>
-      <p class="lead text-justify">For more information, please read and consult the Certification Policies and Procedures Handbook.</p> <br>
-      
-      <h3 class="font-weight-bold font-italic">What does it mean if a person is NGICP certified&#63;</h3>
-      <p class="lead text-justify">The NGICP certification exam is designed to validate whether or not a person has the foundational knowledge needed to properly perform tasks in constructing, inspecting, and maintaining GI. A certified person has an understanding of the objectives of green infrastructure, the way that different GI practices should function, and the critical tasks involved in constructing, inspecting, and maintaining these practices.</p>
-      
-      
-      
-    </div>
-    <div id="menu1" class="container tab-pane fade" role="tabpanel" aria-labelledby="nav-applicant"><br>
-      <h3 class="font-weight-bold font-italic">Why should I apply to become NGICP certified&#63; What will it do for me&#63;</h3>
-      <p class="lead text-justify">The NGICP certification is a green infrastructure-specific credential that will signify that you possess the foundational knowledge needed to properly perform construction, inspection, and maintenance tasks for GI.
-The credential helps you to stand out among other GI job seekers. Employers will know that you have a solid background knowledge of GI and that you are ready to apply that on a job site. GI project owners will be assured that having certified workers install, inspect, and maintain their GI practices will improve the efficiency, performance, and longevity of their GI investment.</p> <br>
-        
-    <h3 class="font-weight-bold font-italic">What are the eligibility requirements to apply for the NGICP&#63;</h3>
-    <p class="lead text-justify">The eligibility requirements include a high school degree (or equivalent) and completing a GI construction, inspection, and maintenance training program.</p> <br>
-        
-    <h3 class="font-weight-bold font-italic">How do I get started&#63;</h3>
-    <p class="lead text-justify">The NGICP currently is under development. The first opportunity for individuals to become certified will occur through the Operational Pre-test, which will be offered only through  <a href="http://ngicp.org/about-ngicp/" target="_blank" rel="noopener" class="link-style">NGICP partners</a> in December 2016. In 2017, partners will be offering regional exam dates. The NGICP will be rolled out nationwide in 2018. Details will be available on this site as they are finalized.</p> <br>    
-        
-    </div>
-    <div id="menu2" class="container tab-pane fade" role="tabpanel" aria-labelledby="nav-util"><br>
-      <h3 class="font-weight-bold font-italic">Why participate in the NGICP&#63;</h3>
-      <p class="lead text-justify">The NGICP is intended to be a tool to help utilities identify and use skilled workers to construct, inspect, and maintain GI. The program is being developed by the NGICP partner organizations who are a coalition of stormwater leaders from across the country. This group welcomes input from other utilities to help ensure that the program meets the needs of many different GI programs. For more information visit the For Utilities page.</p> <br>
-        
-      <h3 class="font-weight-bold font-italic">What are the opportunities for involvement&#63;</h3>
-      <p class="lead text-justify">Utilities and utility professionals can provide input through the Program Partner Organizations into the NGICP strategy, technical development, and training. Learn more on the For Utilities page.</p>
-        
-    </div>
   </div>
-</div>                 
-               
-            
-   </div>
-        
+</nav>
 
-     
-   </div>
-   </main>
-   
+<main id="mainContent" tabindex="-1">
+  <!-- This div contains the carousel(left) and the introduction(right) with flex properties-->
+  <div id="container-fluid">
+    <div id="header" class="row content">
+      <div class="col-12 col-sm-5 left40">
+        <h1 class="Hintro">Green Infrastructure</h1>
+        <h6 class="Hdescription">More info</h6>
+      </div>
+
+      <div class="col-12 col-sm-7 head-wrapper">
+        <div class="headcarousel carousel slide" data-ride="carousel">
+          <div id="head-inner" class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/green-roof.jpg" class="d-none d-md-block" alt="Green Roof">
+              <div class="header-cap">
+                <h1>Green Roofs</h1>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/Rain_Garden.jpg" class="d-none d-md-block" alt=" Rain Garden">
+              <div class="header-cap">
+                <h1>Rain Garden</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</main>
+
      <footer class="bg-success" id="footer">
-        
+
             <div class="container-fluid">
             <div class="row">
             <div class="col-md-4">
               <div><img src="images/logo_env.png" alt="Reroot Pontiac's Logo" class="logo logo-foot">
               </div>
-            </div>    
+            </div>
             <div class="col-md-4">
               <address class="font-weight-bold text-center addr-foot">76 Henderson Street, Pontiac, MI 48341 <br> <i class="fas fa-phone"></i> (248)-703-0288 <br> <i class="far fa-envelope"></i> &#45; <a href="mailto:info@rerootpontiac.org">info@rerootpontiac.org</a> </address>
             </div>
@@ -226,28 +127,28 @@ The credential helps you to stand out among other GI job seekers. Employers will
             <a href="https://www.facebook.com/RealRerootPontiac/" data-toggle="tooltip" data-placement="bottom" title="Facebook" rel="noopener" target="_blank" aria-label="Reroot's Facebook"><i class="fab fa-facebook fa-3x"></i></a>
             <a href="https://twitter.com/RerootPontiac" data-toggle="tooltip" data-placement="bottom" title="Twitter" rel="noopener" target="_blank" aria-label="Reroot's Twitter"><i class="fab fa-twitter fa-3x"></i></a>
             <a href="https://www.youtube.com/channel/UCAvhTHNqkeybG20iPF28sfg" data-toggle="tooltip" data-placement="bottom" title="YouTube" rel="noopener" target="_blank" aria-label="Reroot's YouTube"><i class="fab fa-youtube fa-3x"></i></a>
-            <a href="https://www.instagram.com/realrerootpontiac/" data-toggle="tooltip" data-placement="bottom" title="Instagram" rel="noopener" target="_blank" aria-label="Reroot's Instagram"><i class="fab fa-instagram fa-3x"></i></a> 
-              <div class="text-center font-weight-bold copyRght">&copy; Copyright 2020</div> 
+            <a href="https://www.instagram.com/realrerootpontiac/" data-toggle="tooltip" data-placement="bottom" title="Instagram" rel="noopener" target="_blank" aria-label="Reroot's Instagram"><i class="fab fa-instagram fa-3x"></i></a>
+              <div class="text-center font-weight-bold copyRght">&copy; Copyright 2020</div>
           </div>
       </div>
       </div>
       </footer>
-    
-<!-- jQuery -->   
+
+<!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    
+
 <!-- Popper.JS-->
 <script src="js/Popper.js"></script>
- 
+
 <!-- Bootstrap minified JS -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
- 
-<!-- Website's JS -->    
-<script src="js/Site.js"></script>      
-            
+
+<!-- Website's JS -->
+<script src="js/Site.js"></script>
+
 <!-- aslider.js-->
-<script src="js/aslider.js"></script>            
-                    
-             
-</body>    
+<script src="js/aslider.js"></script>
+
+
+</body>
 </html>

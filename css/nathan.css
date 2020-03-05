@@ -1,0 +1,66 @@
+/* Nathan's GI page*/
+#header{
+	height:-webkit-fill-available;
+	width:100%;
+	display: flex;
+}
+
+.left40{
+	color: white;
+	margin:auto;
+	text-align:right;
+}
+
+.head-wrapper{
+	overflow:hidden;
+	margin:auto;
+}
+
+.Hdescription{
+	font-size: 3rem;
+}
+
+.Hintro{
+	font-size: 5rem;
+}
+
+
+.btn-group-lg>.btn, .btn-lg {
+	padding: 1rem 3rem;
+	font-size: 1.25rem;
+	line-height: 1.5;
+	border-radius: .7rem;
+}
+
+
+
+.headcarousel img {
+	border-radius:3rem;
+	box-shadow: 5px 10px 10px 0 #0efea1;
+	height:auto;
+	width:90%;
+	margin:auto!important;
+	margin-top:1rem;
+}
+
+#head-inner {
+	overflow:visible!important;
+	padding-top:.5rem;
+}
+
+
+.carousel-caption h1{
+	font-weight:bolder;
+}
+
+.carousel-item a:hover {
+	text-decoration:none;
+}
+
+#header .carousel-item img:hover + .header-cap > h1{
+	text-shadow: 1px 1px 2px white, 0 0 1em white, 0 0 0.2em white;
+}
+
+#header .carousel-item img:hover {
+	box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 white;
+}
