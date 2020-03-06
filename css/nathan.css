@@ -146,22 +146,24 @@ body {
 .Hdescription {
   font-size: 1.5rem;
   color: #191970;
+  padding-left: 10px;
 }
 
 .Hintro {
   font-size: 4rem;
   color: #191970;
+  font-style: bold;
 }
 
 .CarouselLable{
-  font-size: 4rem;
+  font-size: 3rem;
   color: #191970;
 }
 .headcarousel img {
   border-radius: 3rem;
   box-shadow: 5px 10px 10px 0 #0efea1;
   height: auto;
-  width: 90%;
+  max-height: 305px;
   margin: auto !important;
   margin-top: 1rem;
 }
@@ -176,4 +178,7 @@ body {
 
 #header .carousel-item img:hover {
   box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 white;
+}
+.width{
+  width: 50%;
 }
