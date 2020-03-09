@@ -1,0 +1,184 @@
+body {
+  background-color: #ddffff !important;
+}
+/* Nav Bar and footer*/
+.navbar {
+  font-family: 'Karma', serif;
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 1.5;
+	padding: .5rem 1rem;
+	align-items: center;
+}
+
+#footer {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  font-family: 'Karma', serif;
+  margin: 0;
+  padding: 0;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+.skip-link {
+  position: absolute;
+  text-decoration: underline;
+  top: -40px;
+  left: 0;
+  background: #FFA500;
+  /* orange */
+  color: #000080;
+  /* navy */
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+.logo {
+  width: 200px;
+}
+
+.logo-contact {
+  width: 500px;
+}
+
+.logo-foot {
+  float: left;
+  padding: 20px;
+}
+
+.navbar-brand img {
+  max-width: 100%;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #000000;
+}
+
+.nav-item::after {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 2px;
+  background: gold;
+  transition: 0.2s;
+}
+
+.nav-item:hover::after {
+  width: 100%;
+}
+
+.navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link, .navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+  color: gold;
+}
+
+.dropdown-item {
+  background-color: #FF8C00;
+  /* darkorange */
+}
+
+.dropdown-item:hover {
+  background-color: #add8e6;
+  /* Lightblue */
+}
+
+*:focus {
+  outline-color: #191970;
+  /* midnightblue */
+}
+
+.nav-link {
+  font-weight: bold;
+  font-size: 1.25rem;
+  /* 20px */
+  padding: 15px 5px;
+  transition: 0.2s;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  /* Tablets, Laptops */
+  .nav-link {
+    font-size: 1.05rem;
+    /* 16px */
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 580px) {
+  /* Phones & other small devices */
+  .logo {
+    margin: auto 30px;
+  }
+
+  .logo-foot {
+    float: none;
+    display: block;
+    margin: auto;
+  }
+}
+.fa-facebook, .fa-twitter, .fa-youtube, .fa-instagram {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 5px;
+  color: darkorange;
+  text-align: center;
+}
+.addr-foot {
+  padding: 10px;
+  font-size: 1.25rem;
+	color: #191970;
+}
+
+.addr-foot a {
+  color: navy;
+}
+.copyRght {
+  font-size: 1.25rem;
+	color: #191970;
+}
+/* -----------------------------------------------------------------*/
+/* Nathan's GI page*/
+/* -----------------------------------------------------------------*/
+.Hdescription {
+  font-size: 1.5rem;
+  color: #191970;
+  padding-left: 10px;
+}
+
+.Hintro {
+  font-size: 4rem;
+  color: #191970;
+  font-style: bold;
+}
+
+.CarouselLable{
+  font-size: 3rem;
+  color: #191970;
+}
+.headcarousel img {
+  border-radius: 3rem;
+  box-shadow: 5px 10px 10px 0 #0efea1;
+  height: auto;
+  max-height: 305px;
+  margin: auto !important;
+  margin-top: 1rem;
+}
+
+.carousel-item a:hover {
+  text-decoration: none;
+}
+
+#header .carousel-item img:hover+.header-cap>h1 {
+  text-shadow: 1px 1px 2px white, 0 0 1em white, 0 0 0.2em white;
+}
+
+#header .carousel-item img:hover {
+  box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 white;
+}
+.width{
+  min-width:500px;
+}
