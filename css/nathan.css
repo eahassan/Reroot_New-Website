@@ -150,7 +150,7 @@ body {
 }
 
 .Hintro {
-  font-size: 4rem;
+  font-size: 3rem;
   color: #191970;
   font-style: bold;
 }
@@ -181,4 +181,21 @@ body {
 }
 .width{
   min-width:500px;
+}
+.MainContent{
+  margin-left: 35px;
+  margin-right: 35px;
+  padding: 35px;
+  border-radius: 3rem;
+  background-color: rgba(50, 115, 220, 0.3);
+}
+.Bintro{
+  font-size: 2.5rem;
+  color: #191970;
+  font-style: bold;
+}
+.Bdescription{
+  font-size: 1.5rem;
+  color: #191970;
+  padding-left: 10px;
 }
