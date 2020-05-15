@@ -143,87 +143,48 @@ body {
 /* -----------------------------------------------------------------*/
 /* Nathan's GI page*/
 /* -----------------------------------------------------------------*/
-.Hdescription {
-  font-size: 1.5rem;
-  color: #191970;
-  padding-left: 10px;
+.Heading{
+  font-family: 'Sriracha';
+}
+.body{
+  font-family: 'Roboto Condensed';
+}
+/* Container 1*/
+.C1 {
+    background-color: rgb(56,163,165);
+    height: 200px;
+    padding-top: 60px;
+    padding-left: 60px;
+}
+.C1Btext{
+  padding-right: 35%
+}
+/* -----------------------------------------------------------------*/
+
+
+/* Container 2*/
+.C2 {
+    background-color: rgb(87,204,153);
+    height: 300px;
+    padding-top:60px;
 }
 
-.Hintro {
-  font-size: 3rem;
-  color: #191970;
-  font-style: bold;
-}
+/* -----------------------------------------------------------------*/
 
-.CarouselLable{
-  font-size: 3rem;
-  color: #191970;
-}
-.headcarousel img {
-  border-radius: 3rem;
-  box-shadow: 5px 10px 10px 0 #0efea1;
-  height: auto;
-  max-height: 305px;
-  margin: auto !important;
-  margin-top: 1rem;
-}
 
-.carousel-item a:hover {
-  text-decoration: none;
+/* Container 3*/
+.C3 {
+    background-color: rgb(128,237,153);
+    height: 300px;
+    padding-top:60px;
 }
-
-#header .carousel-item img:hover+.header-cap>h1 {
-  text-shadow: 1px 1px 2px white, 0 0 1em white, 0 0 0.2em white;
+/* -----------------------------------------------------------------*/
+/* Container 4*/
+.C4 {
+    background-color: rgb(199,249,204);
 }
-
-#header .carousel-item img:hover {
-  box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 white;
-}
-.width{
-  min-width:500px;
-}
-.MainContent{
-  vertical-align: middle;
-  margin-left: 10px;
-  margin-top: 35px;
-  padding: 45px;
-  width: 255px;
-  justify-content: center;
-}
-.Bintro{
-  font-size: 1.5rem;
-  color: #191970;
-  font-style: bold;
-  margin-left: 25px;
-}
-.Bdescription{
-  font-size: 1rem;
-  color: #191970;
-  padding-left: 55px;
-
-}
-.water{
-  margin-left: 35px;
-  margin-right: 35px;
-
-}
-
-.BoxObj{
-  justify-content: center;
-  vertical-align: middle;
-  width: 50%;
-}
-.imgss{
-  margin-left: 45px;
-}
-.indent{
-  margin: 35px;
-}
-.waterbox{
-  border-radius: 3rem;
-  background-color: rgba(51, 153, 255, 0.5);
-}
-.airbox{
-  border-radius: 3rem;
-  background-color: rgba(192, 192, 192, 0.5);
+/* -----------------------------------------------------------------*/
+/* Container 5*/
+.C5 {
+    background-color: rgb(87,204,153);
 }
