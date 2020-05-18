@@ -165,8 +165,9 @@ body {
 /* Container 2*/
 .C2 {
     background-color: rgb(87,204,153);
-    height: 300px;
+    height: auto;
     padding-top:60px;
+    padding-bottom:60px;
 }
 
 /* -----------------------------------------------------------------*/
