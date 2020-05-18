@@ -151,9 +151,7 @@ body {
 }
 /* Container 1*/
 .C1 {
-    background-color: rgb(56,163,165);
-    height: 200px;
-    padding-top: 60px;
+    height: auto;
     padding-left: 60px;
 }
 .C1Btext{
@@ -164,7 +162,6 @@ body {
 
 /* Container 2*/
 .C2 {
-    background-color: rgb(87,204,153);
     height: auto;
     padding-top:60px;
     padding-bottom:60px;
